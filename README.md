@@ -1,5 +1,5 @@
 # vue_voyagers
-Options Travel
 
-Vue.js programming challenge.
+[Vue.js programming challenge](https://neodigm.github.io/vue_voyagers/) 
 
+# Options Travel
