@@ -1,6 +1,8 @@
 # vue_voyagers
 
-[Vue.js programming challenge](https://neodigm.github.io/vue_voyagers/) 
+[Vue.js Star Wars programming challenge](https://neodigm.github.io/vue_voyagers/index.html) 
+
+[Vue.js Star Wars Responsive view](https://material.io/tools/resizer/#url=https%3A%2F%2Fneodigm.github.io%2Fvue_voyagers%2F) 
 
 # Options Travel Requirements:
 
