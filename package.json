@@ -1,0 +1,36 @@
+{
+  "name": "vue_voyagers",
+  "version": "1.0.0",
+  "description": "Vue Programming Challenge",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neodigm/vue_voyagers.git"
+  },
+  "keywords": [
+    "vue",
+    "starwars",
+    "typescript",
+    "javascript"
+  ],
+  "author": "Scott C. Krause",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neodigm/vue_voyagers/issues"
+  },
+  "homepage": "https://github.com/neodigm/vue_voyagers#readme",
+  "dependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/jest": "^24.0.12",
+    "@types/vue": "^2.0.0",
+    "axios": "^0.18.0",
+    "jest": "^24.7.1",
+    "vue": "^2.6.10"
+  }
+}

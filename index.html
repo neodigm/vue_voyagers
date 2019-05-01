@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-<title>A long time ago ⚡ in a galaxy far, far away...</title>
+<head>
+<title>A long time ago 👽 in a galaxy far, far away...</title>
 <!--
   _________             __    __     ____  __.                                  
  /   _____/ ____  _____/  |__/  |_  |    |/ _|___________   __ __  ______ ____  
@@ -12,8 +12,8 @@
 -->
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=2, minimum-scale=1, width=device-width, height=device-height"/>
-<meta name="description"This is a coding exercise designed to demonstrate and prove proficiency in the Vue.js reactive framework. The technologies include advanced CSS, semantic markup, browser native APIs, accessible content and an overall mastery of browser capabilities.">
-<link rel="stylesheet" type="text/css" href="./content/css/vue_voyages.css"/>
+<meta name="description" content="This is a coding exercise designed to demonstrate and prove proficiency in the Vue.js reactive framework. The technologies include advanced CSS, semantic markup, browser native APIs, accessible content and an overall mastery of browser capabilities.">
+<link rel="stylesheet" type="text/css" href="./content/css/vue_voyagers.css"/>
 <meta property="og:title" content="Scott C. Krause Front-end Engineer | Node.js TypeScript WASM React Vue.js">
 <meta property="og:site_name" content="Scott C. Krause JavaScript Developer">
 <meta property="og:url" content="http://thescottkrause.com/">
@@ -39,31 +39,107 @@
     .l-reveal .small{width: 85%;}.l-reveal .medium{width: 85%;}.l-reveal .large{width: 85%;}
     }
 </style>
-    </head>
-    <body>
-        QQQQQQQQQQQQQQQQQQQQQ
+</head>
+<body>
+    <main role="main">
+        <section>
+            <article>
+                <header><h2>Voyagers</h2><nav>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#89595b" width="24" height="24"><path d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"/></svg>
+                </nav></header>
+                <form></form>
+                <aside><div>Name</div><div>Planet</div><div>Species</div><div>Rank</div></aside>
+                <div></div>
+            </article>
+        </section>
+        <section>
+            <article>
+                <header><h2>Crew Ships</h2><nav>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#89595b" width="24" height="24"><path d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"/></svg>
+                </nav></header>
+                <form></form>
+                <aside><div>x</div><div>x</div><div>x</div><div>x</div><div>x</div><div>x</div></aside>
+                <div></div>
+            </article>
+            <article>
+                <header><h2>Created Voyages</h2><nav>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#89595b" width="24" height="24"><path d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"/></svg>
+                </nav></header>
+                <form></form>
+                <aside><div>x</div><div>x</div><div>x</div><div>x</div><div>x</div><div>x</div></aside>
+                <div></div>
+            </article>
+        </section>
+    </main>
 <script>
-console.log("%c Scott C. Krause | Problem Solver and Visual Storyteller. ", "background: #000; color: #f4dc5e; font-size: large");
+'use strict';
+var CnfState = {"audio": false};
+var AudioContext = window.AudioContext || false;
+if (AudioContext) {
+  CnfState.audio = true;    //    Icanuse
+  var oAudContx = new AudioContext();    //    HTML5 Audio
+  var oAJAXReq = new XMLHttpRequest();   //    Get Sounds
+  var aAudioBuffer = new Array(7);       //    Store Sound files
+  var fetchSoundConfig = {sound_max: 7, sound_current: 1};    //    Sound limits
+  setTimeout( function(){ fetchSound(); }, 5600);
+}
+function fetchSound() {
+    //    AJAX a single sound binary
+    oAJAXReq.open("GET", "au/a" + fetchSoundConfig.sound_current + ".mp3", true);
+    oAJAXReq.responseType = "arraybuffer";
+    oAJAXReq.send();
+    oAJAXReq.onload = fetchSoundonload;
+}
+function fetchSoundonload() {
+    //    The audio file has loaded via AJAX
+    oAudContx.decodeAudioData(oAJAXReq.response, function (decAudBuf) {
+        aAudioBuffer[ fetchSoundConfig.sound_current ] = decAudBuf;
+        fetchSoundConfig.sound_current = fetchSoundConfig.sound_current + 1;
+        if(fetchSoundConfig.sound_current <= fetchSoundConfig.sound_max){
+            oAJAXReq = new XMLHttpRequest();
+            oAJAXReq.responseType = "arraybuffer";
+            fetchSound( fetchSoundConfig.sound_current );
+        }
+    });
+};
+function playAudioFile( nSound ) {
+  if( CnfState.audio === true ){  //  Play MP3 if sound toggle is true
+    try{
+      var oSrc = oAudContx.createBufferSource();
+      var volume = oAudContx.createGain();
+      oSrc.buffer = aAudioBuffer[nSound];
+      oSrc.connect(volume);
+      volume.connect(oAudContx.destination);
+      oSrc.connect(oAudContx.destination);
+      oSrc.start(oAudContx.currentTime);
+    } catch( e ){}
+  }
+};
+function playAudioRand( aSound ){  //  Either Or | array | max 2
+  playAudioFile( aSound[Math.random()+.5|0]);
+}
+
+console.log("%c Scott C. Krause | Problem Solver and Visual Storyteller", "background: #000; color: #f4dc5e; font-size: 28px");
 </script>
 <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Lake County",
-        "addressRegion": "IL",
-        "postalCode": "60031"
-        },
-        "email": "neo5ive@gmail.com",
-        "image": "http://www.thescottkrause.com/ux/typescript/engineer/wasm/self.png",
-        "jobTitle": "Sr. UX Front-end Engineer",
-        "name": "Scott Krause",
-        "url": "https://www.theScottKrause.com",
-        "sameAs" : [ "https://github.com/neodigm",
-        "https://repl.it/@neodigm",
-        "https://twitter.com/neodigm24"]
-    }
+{
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Lake County",
+    "addressRegion": "IL",
+    "postalCode": "60031"
+    },
+    "email": "neo5ive@gmail.com",
+    "image": "http://www.thescottkrause.com/ux/typescript/engineer/wasm/self.png",
+    "jobTitle": "Sr. UX Front-end Engineer",
+    "name": "Scott Krause",
+    "url": "https://www.theScottKrause.com",
+    "sameAs" : [ "https://github.com/neodigm",
+    "https://repl.it/@neodigm",
+    "https://twitter.com/neodigm24"]
+}
 </script>
-    </body>
+</body>
 </html>
