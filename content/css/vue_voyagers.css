@@ -135,8 +135,8 @@ main section {
     background-color: #fff;
 }
 main section article {
-    border: solid 1px #733d41;
-    border-radius: 6px 32px;
+    border: solid 1px #706f70;
+    border-radius: 6px 16px;
     background-color: #fff;
     margin: 8px; padding: 8px;
 }
@@ -144,11 +144,20 @@ main section article aside {
     display: grid;
     grid-template-columns: repeat( auto-fill, 25% );
 }
+main section article header h2 {
+    display: block;
+}
+main section article header {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, 25%);
+    align-items: center;
+    text-align: center;
+}
 
 /*  Semantic Document Layout End */
 
 /*  H1 - H6 Begin */
-h1, h2, h3, h4 {
+h1, h2, h3, h4, div {
     margin: 4px; padding: 2px;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
@@ -194,33 +203,6 @@ h2 {
 .rev-artc::-webkit-scrollbar-thumb
 {
     background: #edba08;
-}
-
-.c2a
-{
-    font-family: 'Roboto',sans-serif;
-    font-size: 19px;
-    line-height: 1.4;
-
-    display: block;
-
-    width: 88%;
-    margin: 6px auto;
-    padding: 8px;
-
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    background: linear-gradient(#a94300, #892300);
-}
-.c2a:hover
-{
-    background: linear-gradient(#b95300, #791300);
-    box-shadow: 0 0 8px #c2baa2;
 }
 
 @media only screen and (max-width:48em)

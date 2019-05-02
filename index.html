@@ -41,38 +41,111 @@
 </style>
 </head>
 <body>
-    <main role="main">
+    <main id="js-main" role="main">
         <section>
             <article>
-                <header><h2>Voyagers</h2><nav>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="#89595b" width="24" height="24"><path d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"/></svg>
-                </nav></header>
+                <header><h2>Voyagers</h2>
+                    <div></div><div></div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" fill="#89595b" width="24" height="24"><path d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"/></svg></div>
+                </header>
                 <form></form>
-                <aside><div>Name</div><div>Planet</div><div>Species</div><div>Rank</div></aside>
+                <aside class="h-tx__ctr"><div>Name</div><div>Planet</div><div>Species</div><div>Rank</div></aside>
                 <div></div>
             </article>
         </section>
         <section>
             <article>
-                <header><h2>Crew Ships</h2><nav>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="#89595b" width="24" height="24"><path d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"/></svg>
-                </nav></header>
+                <header><h2>Crew Ships</h2>
+                    <div></div><div></div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" fill="#89595b" width="24" height="24"><path d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"/></svg></div>
+                </header>
                 <form></form>
-                <aside><div>x</div><div>x</div><div>x</div><div>x</div><div>x</div><div>x</div></aside>
+                <aside class="h-tx__ctr"><div>x</div><div>x</div><div>x</div><div>x</div><div>x</div><div>x</div></aside>
                 <div></div>
             </article>
             <article>
-                <header><h2>Created Voyages</h2><nav>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="#89595b" width="24" height="24"><path d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"/></svg>
-                </nav></header>
+                <header><h2>Created Voyages</h2>
+                    <div></div><div></div>
+                    <div><svg xmlns="http://www.w3.org/2000/svg" fill="#89595b" width="24" height="24"><path d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"/></svg></div>
+                </header>
                 <form></form>
-                <aside><div>x</div><div>x</div><div>x</div><div>x</div><div>x</div><div>x</div></aside>
+                <aside class="h-tx__ctr"><div>x</div><div>x</div><div>x</div><div>x</div><div>x</div><div>x</div></aside>
                 <div></div>
             </article>
         </section>
     </main>
+    <a55-rv class="l-reveal"><!-- Component Begin --> 
+        <aside id="id-reveal__scrim" class="close-reveal-modal"></aside> 
+    </a55-rv><!-- Component End --> 
+    
+    <ltdc-snackbar class="l-snackbar" role="alert"><!--  Component Begin  -->
+        <section id="js-snackbar__id" class="snackbar__cont snackbar__cont--hide" aria-live="polite" aria-atomic="true">
+            <div class="snackbar__progbar"></div>
+            <p class="snackbar__msg"></p>
+        </section>
+    </ltdc-snackbar><!--  Component End  -->
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+<script defer src="js/vue.runtime.min.js"></script>
+<script defer src="js/snackbar/snackbar.js"></script>
+<script defer src="js/reveal/reveal.js"></script>
 <script>
 'use strict';
+
+var aStarships = [];
+var aPeople = [];
+
+var fRESTstarships = function( url = "https://swapi.co/api/starships/" ){
+    let jResults=[];
+    fetch( url )
+        .then(( resp ) => resp.json())
+        .then(function( rest ) {
+            jResults = jResults.concat( Array.from( rest.results ) );
+            if( rest.next ) fRESTstarships( rest.next, aStarships );
+            aStarships = aStarcraft.concat( jResults );
+        });
+};
+var fRESTpeople = function( url = "https://swapi.co/api/people/" ){
+    let jResults=[];
+    fetch( url )
+        .then(( resp ) => resp.json())
+        .then(function( rest ) {
+            jResults = jResults.concat( Array.from( rest.results ) );
+            if( rest.next ) fRESTpeople( rest.next, aPeople );
+            aPeople = aPeople.concat( jResults );
+        });
+};
+
+fRESTstarships();
+fRESTpeople();
+
+var vCart = new Vue( {
+  el: "#js-main",
+  data: {
+  aStarships: [],
+  aPeople: []
+  },
+  computed: {
+    cTotal: function () {  //  On Button
+      var nT = 0;
+      this.aSKU.filter(function( _oSKU ){
+        nT = nT + ( _oSKU.qty * _oSKU.srp )
+      });
+      return ( nT ).toFixed(2);
+    }
+  },
+  watch: {},
+  methods: {
+    mtCrt : function(){
+      this.aSKU.filter(function( _oSKU ){ _oSKU.qty =0 ; });
+    }
+  },
+  mounted: function( e ){
+    setTimeout( function(){
+   
+    }, 3200);
+  }
+});
+
 var CnfState = {"audio": false};
 var AudioContext = window.AudioContext || false;
 if (AudioContext) {
@@ -141,5 +214,6 @@ console.log("%c Scott C. Krause | Problem Solver and Visual Storyteller", "backg
     "https://twitter.com/neodigm24"]
 }
 </script>
+
 </body>
 </html>
