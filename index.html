@@ -50,7 +50,12 @@
                 </header>
                 <form></form>
                 <aside class="h-tx__ctr"><div>Name</div><div>Planet</div><div>Species</div><div>Rank</div></aside>
-                <div></div>
+                <div class="voy--cont">
+                    <section class="voy--grd" role="row"
+                      v-for="(oPerson, index) in aPeople">
+                      <div> {{ oPerson.name }} </div>
+                    </section>
+                </div>
             </article>
         </section>
         <section>
@@ -85,40 +90,14 @@
         </section>
     </ltdc-snackbar><!--  Component End  -->
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">
-<script defer src="js/vue.runtime.min.js"></script>
+<script src="js/vue.runtime.min.js"></script>
 <script defer src="js/snackbar/snackbar.js"></script>
 <script defer src="js/reveal/reveal.js"></script>
 <script>
 'use strict';
 
-var aStarships = [];
-var aPeople = [];
 
-var fRESTstarships = function( url = "https://swapi.co/api/starships/" ){
-    let jResults=[];
-    fetch( url )
-        .then(( resp ) => resp.json())
-        .then(function( rest ) {
-            jResults = jResults.concat( Array.from( rest.results ) );
-            if( rest.next ) fRESTstarships( rest.next, aStarships );
-            aStarships = aStarcraft.concat( jResults );
-        });
-};
-var fRESTpeople = function( url = "https://swapi.co/api/people/" ){
-    let jResults=[];
-    fetch( url )
-        .then(( resp ) => resp.json())
-        .then(function( rest ) {
-            jResults = jResults.concat( Array.from( rest.results ) );
-            if( rest.next ) fRESTpeople( rest.next, aPeople );
-            aPeople = aPeople.concat( jResults );
-        });
-};
-
-fRESTstarships();
-fRESTpeople();
-
-var vCart = new Vue( {
+var vVoyage = new Vue( {
   el: "#js-main",
   data: {
   aStarships: [],
@@ -137,12 +116,43 @@ var vCart = new Vue( {
   methods: {
     mtCrt : function(){
       this.aSKU.filter(function( _oSKU ){ _oSKU.qty =0 ; });
+    },
+    fRESTstarships : function( url = "https://swapi.co/api/starships/" ){
+        let jResults=[];
+        fetch( url )
+            .then(( resp ) => resp.json())
+            .then(function( rest ) {  //  API Recursive Pagination
+                jResults = jResults.concat( Array.from( rest.results ) );
+                vVoyage.aStarships = vVoyage.aStarships.concat( jResults );
+                if( rest.next ){
+                    vVoyage.fRESTstarships( rest.next, vVoyage.aStarships );
+                }else{ //  init sort
+                    vVoyage.aStarships = vVoyage.aStarships.sort( ( a, b ) => {
+                        return ( a.name > b.name ) - ( a.name < b.name );
+                    });
+                }
+            });
+    },
+    fRESTpeople : function( url = "https://swapi.co/api/people/" ){
+        let jResults=[];
+        fetch( url )
+            .then(( resp ) => resp.json())
+            .then(function( rest ) {  //  API Recursive Pagination
+                jResults = jResults.concat( Array.from( rest.results ) );
+                vVoyage.aPeople = vVoyage.aPeople.concat( jResults );
+                if( rest.next ){
+                    vVoyage.fRESTpeople( rest.next, vVoyage.aPeople );
+                }else{ //  init sort
+                    vVoyage.aPeople = vVoyage.aPeople.sort( ( a, b ) => {
+                        return ( a.name > b.name ) - ( a.name < b.name );
+                    });
+                }
+            });
     }
   },
   mounted: function( e ){
-    setTimeout( function(){
-   
-    }, 3200);
+    this.fRESTstarships();
+    this.fRESTpeople();
   }
 });
 

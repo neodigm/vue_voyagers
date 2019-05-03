@@ -13,19 +13,10 @@ body
     color: #4d473c;
     background-color: #fff;
 }
-body::-webkit-scrollbar
-{
-    width: 8px;
-    height: 8px;
-}
-body::-webkit-scrollbar-track
-{
-    background: rgba(97,73,3,.2);
-}
-body::-webkit-scrollbar-thumb
-{
-    background: #edba08;
-}
+body::-webkit-scrollbar{ width: 8px; height: 8px; }
+body::-webkit-scrollbar-track{ background: rgba(112, 111, 112, .2); }
+body::-webkit-scrollbar-thumb{ background: #89595b; }
+
 a
 {
     outline: none;
@@ -130,12 +121,12 @@ main {
     grid-template-columns: 60% 40%;
 }
 
-main section {
+main > section {
     min-height: calc( 100vh - 32px);
     background-color: #fff;
 }
 main section article {
-    border: solid 1px #706f70;
+    border: solid 1px #888888;
     border-radius: 6px 16px;
     background-color: #fff;
     margin: 8px; padding: 8px;
@@ -153,6 +144,15 @@ main section article header {
     align-items: center;
     text-align: center;
 }
+
+.voy--cont{
+    max-height: calc( 100vh - 112px);
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.voy--cont::-webkit-scrollbar{ width: 8px; height: 8px; }
+.voy--cont::-webkit-scrollbar-track{ background: rgba(112, 111, 112, .2); }
+.voy--cont::-webkit-scrollbar-thumb{ background: #9e7677; }
 
 /*  Semantic Document Layout End */
 
