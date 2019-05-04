@@ -21,7 +21,7 @@
 <meta property="og:type" content="website">
 <meta property="og:image" content="http://thescottkrause.com/ux/typescript/engineer/wasm/javascript_typescript_developer.jpg">
 <style type="text/css">
-    .l-snackbar .snackbar__cont{border-radius:4px;background:linear-gradient(45deg,#a29980 0%,#665f50 100%);box-shadow:inset #665f50 0 0 6px 2px;border:solid 1px #d3cdb4;left:38%;min-width:188px;padding:0;position:fixed;transition:bottom .6s ease-in-out;user-select:none;z-index:6408}.l-snackbar .snackbar__cont--hide{bottom:-112px;transition:bottom .6s ease-in-out}.l-snackbar .snackbar__cont--show{bottom:4px;transition:bottom .6s ease-in-out}.l-snackbar .snackbar__progbar{background-color:#edba08;height:2px;padding:0;margin:0;position:relative;top:2px}.l-snackbar .snackbar__cont--hide .snackbar__progbar{width:0%;transition:all .1s ease-in-out}.l-snackbar .snackbar__cont--show .snackbar__progbar{width:101%;transition:all 6s ease-in-out}.l-snackbar .snackbar__msg{color:#fff;font-family:sans-serif;font-size:16px;margin:20px;text-align:center;white-space:nowrap}
+    .l-snackbar .snackbar__cont{border-radius:4px;background:linear-gradient(45deg,#763f44 0%,#733d41 100%);box-shadow:inset #665f50 0 0 6px 2px;border:solid 1px #d3cdb4;left:38%;min-width:188px;padding:0;position:fixed;transition:bottom .6s ease-in-out;user-select:none;z-index:6408}.l-snackbar .snackbar__cont--hide{bottom:-112px;transition:bottom .6s ease-in-out}.l-snackbar .snackbar__cont--show{bottom:4px;transition:bottom .6s ease-in-out}.l-snackbar .snackbar__progbar{background-color:#edba08;height:2px;padding:0;margin:0;position:relative;top:2px}.l-snackbar .snackbar__cont--hide .snackbar__progbar{width:0%;transition:all .1s ease-in-out}.l-snackbar .snackbar__cont--show .snackbar__progbar{width:101%;transition:all 6s ease-in-out}.l-snackbar .snackbar__msg{color:#fff;font-family:sans-serif;font-size:16px;margin:20px;text-align:center;white-space:nowrap}
     .l-reveal .reveal__box
     {position: absolute;z-index: 1005;top: 0;right: 0;left: 0;
     display: block!important;width: 100%;margin: 0 auto;padding: 8px;border: solid 1px #666;border-radius: 6px;background-color: #fff;box-shadow: 0 0 10px rgba(0,0,0,.4);
@@ -45,14 +45,20 @@
         <section>
             <article>
                 <header><h2>Voyagers</h2>
-                    <div><button class="cta__prime">Add Voyager ...</button></div><div></div>
-                    <div><svg xmlns="http://www.w3.org/2000/svg" fill="#89595b" width="24" height="24"><path d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"/></svg></div>
+                    <div></div><div></div>
+                    <div>
+                        <select class="select-css" v-on:change="VoySelect()" v-model="VoySelectValue">
+                            <option value="Add">Add Voyager</option>
+                            <option v-for="(oPerson, index) in aPeople" :value="index"> {{ oPerson.name }} </option>
+
+                        </select>                        
+                    </div>
                 </header>
                 <form></form>
                 <aside class="h-tx__ctr"><div>Name</div><div>Planet</div><div>Species</div><div>Gender</div><div>Rank</div><div>Actions</div></aside>
                 <div class="voy--cont">
                     <section class="voy--grd" role="row"
-                      v-for="(oPerson, index) in aPeople">
+                      v-for="(oPerson, index) in aPeopleSel">
                       <div> {{ oPerson.name }} </div>
                       <div> {{ oPerson.homeworld }} </div>
                       <div> {{ oPerson.species }} </div>
@@ -113,9 +119,11 @@ var vVoyage = new Vue( {
   data: {
   aStarships: [],
   aPeople: [],
+  aPeopleSel: [],
   aPlanets: [],
   aSpecies: [],
   RESTCount: 0,
+  VoySelectValue: "Add",
   },
   computed: {
     cTotal: function () {  //  On Button
@@ -127,30 +135,39 @@ var vVoyage = new Vue( {
     }
   },
   watch: {
-      RESTCount : function(){
+      RESTCount : function(){  //  All JSON has been received
           const NUM_COMPLETE_REQ = 4;
-          if( this.RESTCount === NUM_COMPLETE_REQ ){  //  init sort
-            this.aStarships = this.aStarships.sort( ( a, b ) => {
-                return ( a.name > b.name ) - ( a.name < b.name );
-            });
-            this.aPeople = this.aPeople.sort( ( a, b ) => {
-                return ( a.name > b.name ) - ( a.name < b.name );
-            });
-            this.aPeople.map(function( p ){  //  Gen Rank | Denormalize
-                const aRanks = ["Captain", "Crew","XO", "Space Cadet"];
-                p.rank = aRanks[ (Math.floor(Math.random() * (4) )) ];
-                p.homeworld = vVoyage.getPlanetName( p.homeworld );
-                p.species = vVoyage.getSpeciesName( p.species[0] );
-            });
-          }
+          if( this.RESTCount === NUM_COMPLETE_REQ ) this.RESTPost();  //  Init Sort and Gen Rank
       }
   },
   methods: {
+    VoySelect : function(){  //  Drop-down Selected
+        if( this.VoySelectValue !== "Add" ){
+            if( this.nameExists( this.aPeople[ this.VoySelectValue ].name, this.aPeopleSel ) ){
+                playAudioFile( 3 );
+                snck.q("That Voyager already exists.");
+            }else{
+                this.aPeopleSel.push( this.aPeople[ this.VoySelectValue ] );
+                this.VoySelectValue = "Add";
+                playAudioFile( 4 );                
+            }
+        }
+    },
     VoyInfo : function( oPers ){
-        playAudioFile( 1 );
+        playAudioFile( 2 );
+        snck.q( "Name: " + oPers.name + " Height: " + oPers.height + "|Hair: " + oPers.hair_color + " Eyes: " + oPers.eye_color );
     },
     VoyRemove : function( oPers ){
         playAudioFile( 1 );
+        snck.q( oPers.name + " has been removed|from the voyage" );
+
+    },
+    nameExists: function( name, arr ){
+        let bExists = false
+        arr.forEach( function( item ){
+            if( item.name === name ) bExists = true;
+        } );
+        return bExists;
     },
     getSpeciesName : function( SpeciesURL = "https://swapi.co/api/species/4/" ){
         let SpeciesName = this.aSpecies.filter( function( e ){
@@ -164,8 +181,19 @@ var vVoyage = new Vue( {
         } )[0].name;
         return PlanetName;
     },
-    RESTPost : function(){
-      this.aSKU.filter(function( _oSKU ){ _oSKU.qty =0 ; });
+    RESTPost : function(){  //  Init Sort by Name
+        this.aStarships = this.aStarships.sort( ( a, b ) => {
+            return ( a.name > b.name ) - ( a.name < b.name );
+        });
+        this.aPeople = this.aPeople.sort( ( a, b ) => {
+            return ( a.name > b.name ) - ( a.name < b.name );
+        });
+        this.aPeople.map(function( p ){  //  Gen Rank | Denormalize
+            const aRanks = ["Captain", "Crew","XO", "Space Cadet"];
+            p.rank = aRanks[ (Math.floor(Math.random() * (4) )) ];
+            p.homeworld = vVoyage.getPlanetName( p.homeworld );
+            p.species = vVoyage.getSpeciesName( p.species[0] );
+        });
     },
     fRESTstarships : function( url = "https://swapi.co/api/starships/" ){
         let jResults=[];
