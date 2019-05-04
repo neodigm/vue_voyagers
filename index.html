@@ -45,16 +45,13 @@
         <section>
             <article>
                 <header><h2>Voyagers</h2>
-                    <div></div><div></div>
                     <div>
                         <select class="select-css" v-on:change="VoySelect()" v-model="VoySelectValue">
                             <option value="Add">Add Voyager</option>
-                            <option v-for="(oPerson, index) in aPeople" :value="index"> {{ oPerson.name }} </option>
-
+                            <option v-for="(oPerson, index) in aPeople" :value="index"> {{ oPerson.name + " (" + oPerson.rank + ")"  }} </option>
                         </select>                        
                     </div>
                 </header>
-                <form></form>
                 <aside class="h-tx__ctr"><div>Name</div><div>Planet</div><div>Species</div><div>Gender</div><div>Rank</div><div>Actions</div></aside>
                 <div class="voy--cont">
                     <section class="voy--grd" role="row"
@@ -68,7 +65,7 @@
                           <a v-on:click.prevent="VoyInfo( oPerson )">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 15c-.55 0-1-.45-1-1v-4c0-.55.45-1 1-1s1 .45 1 1v4c0 .55-.45 1-1 1zm1-8h-2V7h2v2z"/></svg>
                           </a>
-                          <a v-on:click.prevent="VoyRemove( oPerson )">
+                          <a v-on:click.prevent="VoyRemove( oPerson, index )">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v10zM18 4h-2.5l-.71-.71c-.18-.18-.44-.29-.7-.29H9.91c-.26 0-.52.11-.7.29L8.5 4H6c-.55 0-1 .45-1 1s.45 1 1 1h12c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
                           </a>
                       </div>
@@ -79,20 +76,18 @@
         <section>
             <article>
                 <header><h2>Crew Ships</h2>
-                    <div></div><div></div>
                     <div><svg xmlns="http://www.w3.org/2000/svg" fill="#89595b" width="24" height="24"><path d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"/></svg></div>
                 </header>
                 <form></form>
-                <aside class="h-tx__ctr"><div>x</div><div>x</div><div>x</div><div>x</div><div>x</div><div>x</div></aside>
+                <aside class="h-tx__ctr"><div>Ship Name</div><div>Troops</div><div>Model</div><div>Actions</div></aside>
                 <div></div>
             </article>
             <article>
                 <header><h2>Created Voyages</h2>
-                    <div></div><div></div>
                     <div><svg xmlns="http://www.w3.org/2000/svg" fill="#89595b" width="24" height="24"><path d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"/></svg></div>
                 </header>
                 <form></form>
-                <aside class="h-tx__ctr"><div>x</div><div>x</div><div>x</div><div>x</div><div>x</div><div>x</div></aside>
+                <aside class="h-tx__ctr"><div>Ship</div><div>Depart</div><div>Destination</div><div>Actions</div></aside>
                 <div></div>
             </article>
         </section>
@@ -157,10 +152,10 @@ var vVoyage = new Vue( {
         playAudioFile( 2 );
         snck.q( "Name: " + oPers.name + " Height: " + oPers.height + "|Hair: " + oPers.hair_color + " Eyes: " + oPers.eye_color );
     },
-    VoyRemove : function( oPers ){
+    VoyRemove : function( oPers, indx ){
         playAudioFile( 1 );
         snck.q( oPers.name + " has been removed|from the voyage" );
-
+        this.aPeopleSel.splice( indx, 1 );
     },
     nameExists: function( name, arr ){
         let bExists = false

@@ -131,23 +131,28 @@ main section article {
     background-color: #fff;
     margin: 8px; padding: 8px;
 }
-main section article aside {
+main section:nth-of-type(1) article aside {
     display: grid;
     grid-template-columns: repeat( auto-fill, 16% );
+}
+main section article aside {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, 25% );
 }
 main section article header h2 {
     display: block;
 }
 main section article header {
     display: grid;
-    grid-template-columns: repeat( auto-fill, 25%);
+    grid-template-columns: repeat( auto-fill, 50%);
     align-items: center;
-    text-align: center;
+    text-align: left;
     border-bottom: 1px solid #ddd;
 }
 
 .voy--cont{
     max-height: calc( 100vh - 112px);
+    min-height: 480px;
     overflow-y: scroll;
     overflow-x: hidden;
     background-image: url('../../talented/rebel_bg.jpg');
@@ -299,6 +304,15 @@ h2 {
     }
     main section {
         min-height: 44px;
+    }
+    .voy--grd div {
+        font-size: 10px;
+    }
+    .voy--actions a {
+        cursor: pointer;
+        height: 22px;
+        width: 22px;
+        margin: 2px;
     }
 }
 
