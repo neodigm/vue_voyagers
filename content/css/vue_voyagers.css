@@ -133,7 +133,7 @@ main section article {
 }
 main section article aside {
     display: grid;
-    grid-template-columns: repeat( auto-fill, 25% );
+    grid-template-columns: repeat( auto-fill, 16% );
 }
 main section article header h2 {
     display: block;
@@ -143,18 +143,60 @@ main section article header {
     grid-template-columns: repeat( auto-fill, 25%);
     align-items: center;
     text-align: center;
+    border-bottom: 1px solid #ddd;
 }
 
 .voy--cont{
     max-height: calc( 100vh - 112px);
     overflow-y: scroll;
     overflow-x: hidden;
+    background-image: url('../../talented/rebel_bg.jpg');
+    background-size: 100%;
+    background-clip: content-box;
+}
+.voy--grd {
+    display: grid;
+    grid-template-columns: repeat( auto-fill, 16%);
+    align-items: center;
+    text-align: left;
+    background: rgba(256, 256, 256, .9);
+}
+.voy--grd:hover {
+    background: #fff;
 }
 .voy--cont::-webkit-scrollbar{ width: 8px; height: 8px; }
-.voy--cont::-webkit-scrollbar-track{ background: rgba(112, 111, 112, .2); }
+.voy--cont::-webkit-scrollbar-track{ background: rgba(200, 199, 200, .8); }
 .voy--cont::-webkit-scrollbar-thumb{ background: #9e7677; }
 
+.voy--actions {
+    text-align: center;
+}
+.voy--actions a {
+    cursor: pointer;
+    height: 32px; width: 32px;
+    margin: 2px 8px;
+}
+.voy--actions a svg {
+    fill: #9e7677;
+}
+.voy--grd:hover .voy--actions a svg {
+    fill: #733d41;
+}
+
 /*  Semantic Document Layout End */
+
+/*  CTA Begin  */
+    .cta__prime{
+        border: solid 1px #733d41;
+        border-radius: 6px;
+        color: #fff;
+        display: block;
+        margin: 2px 4px;
+        padding: 8px;
+        text-align: center;
+        background-color: #733d41;
+    }
+/*  CTA End  */
 
 /*  H1 - H6 Begin */
 h1, h2, h3, h4, div {
