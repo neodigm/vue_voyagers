@@ -46,9 +46,10 @@
             <article>
                 <header><h2>Voyagers</h2>
                     <div>
-                        <select class="select-css" v-on:change="VoySelect()" v-model="VoySelectValue">
+                        <select class="select-css" v-on:change="VoySelect()" v-model="VoySelectValue"
+                        :class="{ 'h-ds__none': ( RESTCount != 4 ) }">
                             <option value="Add">Add Voyager</option>
-                            <option v-for="(oPerson, index) in aPeople" :value="index"> {{ oPerson.name + " (" + oPerson.rank + ")"  }} </option>
+                            <option v-for="(oPerson, index) in aPeople" :value="index"> {{ oPerson.name + "  (" + oPerson.rank + ")"  }} </option>
                         </select>                        
                     </div>
                 </header>
@@ -76,17 +77,48 @@
         <section>
             <article>
                 <header><h2>Crew Ships</h2>
-                    <div><svg xmlns="http://www.w3.org/2000/svg" fill="#89595b" width="24" height="24"><path d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"/></svg></div>
                 </header>
-                <form></form>
-                <aside class="h-tx__ctr"><div>Ship Name</div><div>Troops</div><div>Model</div><div>Actions</div></aside>
-                <div></div>
+                <form  novalidate="novalidate" role="form">
+                    <input maxlength="32" type="text" placeholder="* Ship Name"
+                    v-model="Shp_name">
+                    <select class="select-css" v-model="ShpSelectValue">
+                        <option value="Add">Select Model</option>
+                        <option v-for="(oStarship, index) in aStarships" :value="index"> {{ oStarship.model }} </option>
+                    </select>
+                    <a :class="{'cta_invalid' : ( !ShpMicrocopy[0] ) }"
+                    v-on:click.prevent="ShpCTA()"> {{ ShpMicrocopy[1] }} </a>
+                </form>
+                <aside class="h-tx__ctr"><div>Ship Name</div><div>Crew Count</div><div>Model</div><div>Actions</div></aside>
+<div class="shp--cont">
+    <section class="shp--grd" role="row"
+        v-for="(oShp, index) in aShp">
+        <div> {{ oShp.name }} </div>
+        <div> {{ oShp.voyagers.length }} </div>
+        <div> {{ oShp.model }} </div>
+        <div class="shp--actions">
+            <a v-on:click.prevent="VoyInfo( oShp )">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3.4 20.4l17.45-7.48a1 1 0 0 0 0-1.84L3.4 3.6a.993.993 0 0 0-1.39.91L2 9.12c0 .5.37.93.87.99L17 12 2.87 13.88c-.5.07-.87.5-.87 1l.01 4.61c0 .71.73 1.2 1.39.91z"/></svg>                    
+            </a>
+            <a v-on:click.prevent="VoyInfo( oShp )">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M3 17.46v3.04c0 .28.22.5.5.5h3.04c.13 0 .26-.05.35-.15L17.81 9.94l-3.75-3.75L3.15 17.1c-.1.1-.15.22-.15.36zM20.71 7.04a.996.996 0 0 0 0-1.41l-2.34-2.34a.996.996 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+            </a>
+
+            <a v-on:click.prevent="VoyInfo( oShp )">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 15c-.55 0-1-.45-1-1v-4c0-.55.45-1 1-1s1 .45 1 1v4c0 .55-.45 1-1 1zm1-8h-2V7h2v2z"/></svg>
+            </a>
+            <a v-on:click.prevent="VoyRemove( oShp, index )">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v10zM18 4h-2.5l-.71-.71c-.18-.18-.44-.29-.7-.29H9.91c-.26 0-.52.11-.7.29L8.5 4H6c-.55 0-1 .45-1 1s.45 1 1 1h12c.55 0 1-.45 1-1s-.45-1-1-1z"/></svg>
+            </a>
+        </div>
+    </section>
+</div>
             </article>
             <article>
                 <header><h2>Created Voyages</h2>
-                    <div><svg xmlns="http://www.w3.org/2000/svg" fill="#89595b" width="24" height="24"><path d="M8.12 9.29L12 13.17l3.88-3.88a.996.996 0 1 1 1.41 1.41l-4.59 4.59a.996.996 0 0 1-1.41 0L6.7 10.7a.996.996 0 0 1 0-1.41c.39-.38 1.03-.39 1.42 0z"/></svg></div>
                 </header>
-                <form></form>
+                <form  novalidate="novalidate" role="form">
+
+                </form>
                 <aside class="h-tx__ctr"><div>Ship</div><div>Depart</div><div>Destination</div><div>Actions</div></aside>
                 <div></div>
             </article>
@@ -119,28 +151,58 @@ var vVoyage = new Vue( {
   aSpecies: [],
   RESTCount: 0,
   VoySelectValue: "Add",
+  aShp: [],
+  ShpSelectValue: "Add",
+  Shp_name: "",
   },
   computed: {
-    cTotal: function () {  //  On Button
-      var nT = 0;
-      this.aSKU.filter(function( _oSKU ){
-        nT = nT + ( _oSKU.qty * _oSKU.srp )
-      });
-      return ( nT ).toFixed(2);
+    ShpMicrocopy: function(){  //  Passive Validation
+        let aRet = [true, "Add / Save Ship",""];  //  Dyn Button Wording (aka Microcopy)
+        if( this.ShpSelectValue === "Add" )
+            aRet = [false, "Select Model","Assign a model / class|to the ship."];
+        if( !this.Shp_name )
+            aRet = [false, "Name Ship","Assign a unique name|to the new ship."];
+if( false )
+            aRet = [false, "Ship Already Exists","That Ship name|already exists."];
+        if( !this.hasCaptain() )
+            aRet = [false, "Assign Captain","A voyager of the rank captain must|be on the ship's manifest."];
+        if( this.aPeopleSel.length === 0 )
+            aRet = [false, "Add Voyagers","Add one or more Voyagers with|at least one being a captain."];
+        return aRet;
     }
   },
   watch: {
-      RESTCount : function(){  //  All JSON has been received
-          const NUM_COMPLETE_REQ = 4;
-          if( this.RESTCount === NUM_COMPLETE_REQ ) this.RESTPost();  //  Init Sort and Gen Rank
+      RESTCount : function(){  //  All JSON have been received
+          const NUM_COMPLETE = 4, NUM_NOT_COMPLETE = 2;
+          if( this.RESTCount === NUM_NOT_COMPLETE ) snck.q("Loading ... Please Wait");
+          if( this.RESTCount === NUM_COMPLETE ) this.RESTPost();  //  Init Sort and Gen Rank
       }
   },
   methods: {
+    ShpCTA: function(){  //  CTA clicked / touched
+        const VAL_STATE = 0, VAL_MSG = 2;
+        if( this.ShpMicrocopy[ VAL_STATE ] ){  //  Is in valid state
+            let oShp = {id: Date.now(), name: this.Shp_name, model: this.aStarships[ this.ShpSelectValue ].name };
+            oShp.voyagers = this.aPeopleSel;
+            this.aShp.push( oShp );
+            snck.q( "The ship " + oShp.name + " has been|commissioned." );
+            playAudioFile( 5 );
+            this.ShpReset();
+        }else{
+            snck.q( this.ShpMicrocopy[ VAL_MSG ] );
+            playAudioFile( 3 );
+        }
+    },
+    ShpReset: function(){  //  Reset UI and data
+        this.aPeopleSel = [];
+        this.Shp_name = "";
+        this.ShpSelectValue = "Add";
+    },
     VoySelect : function(){  //  Drop-down Selected
         if( this.VoySelectValue !== "Add" ){
             if( this.nameExists( this.aPeople[ this.VoySelectValue ].name, this.aPeopleSel ) ){
                 playAudioFile( 3 );
-                snck.q("That Voyager already exists.");
+                snck.q( this.aPeople[ this.VoySelectValue ].name + " already exists on|the ship's manifest.");
             }else{
                 this.aPeopleSel.push( this.aPeople[ this.VoySelectValue ] );
                 this.VoySelectValue = "Add";
@@ -154,7 +216,7 @@ var vVoyage = new Vue( {
     },
     VoyRemove : function( oPers, indx ){
         playAudioFile( 1 );
-        snck.q( oPers.name + " has been removed|from the voyage" );
+        snck.q( oPers.name + " has been jettisoned from |the ship's manifest." );
         this.aPeopleSel.splice( indx, 1 );
     },
     nameExists: function( name, arr ){
@@ -178,7 +240,7 @@ var vVoyage = new Vue( {
     },
     RESTPost : function(){  //  Init Sort by Name
         this.aStarships = this.aStarships.sort( ( a, b ) => {
-            return ( a.name > b.name ) - ( a.name < b.name );
+            return ( a.model > b.model ) - ( a.model < b.model );
         });
         this.aPeople = this.aPeople.sort( ( a, b ) => {
             return ( a.name > b.name ) - ( a.name < b.name );
@@ -237,6 +299,12 @@ var vVoyage = new Vue( {
                     vVoyage.fRESTSpecies( rest.next, vVoyage.aSpecies );
                 }else{ vVoyage.RESTCount++; }
             });
+    },
+    hasCaptain: function(){  //  Has a Captain current manifest
+        const aHasCpt = this.aPeopleSel.filter(function( e ){
+            if( e.rank === "Captain" ) return true;
+        });
+        return ( aHasCpt.length !== 0 );
     },
     one2ten : function(){ return (Math.floor(Math.random() * (10) + 1)); }
   },
