@@ -241,7 +241,7 @@ section:nth-of-type(2) form {
 	grid-template-columns: repeat( auto-fill, 32%);
 	align-items: center;
 	text-align: left;
-	column-gap: 12px;
+	column-gap: 6px;
 	margin: 4px 0;
 }
 section:nth-of-type(2) form input {
@@ -388,13 +388,21 @@ h2 {
 		height: 22px;
 		width: 22px;
 		margin: 2px;
-	}
+    }
+    section:nth-of-type(2) form {
+        column-gap: 6px;
+        margin: 2px 0;
+    }
 }
 @media only screen and (min-width:48.1em) and (max-width:62em) {
-	/* medium */
-	.l-prof__grd, .l-prof__grd2 {
-		grid-template-columns: 1fr;
-	}
+    /* medium */
+    main {
+        grid-template-columns: 50% 50%;
+    }
+    section:nth-of-type(2) form {
+        column-gap: 6px;
+        margin: 2px 0;
+    }
 }
 @media only screen and (min-width:62.1em) {
 	/* large */
