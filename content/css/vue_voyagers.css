@@ -291,7 +291,8 @@ section:nth-of-type(2) form a {
 	box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
 	border-radius: .5em;
 	background-color: #733d41;
-	text-align: center;
+    text-align: center;
+    transition: all 2s;
 }
 section:nth-of-type(2) form a:hover {
 	border-color: #888;
@@ -305,7 +306,8 @@ section:nth-of-type(2) form a:focus {
 }
 section:nth-of-type(2) form a.cta_invalid {
 	cursor: not-allowed;
-	background-color: #888;
+    background-color: #888;
+    transition: all 2s;
 }
 /*  CTA End  */
 

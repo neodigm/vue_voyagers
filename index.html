@@ -294,7 +294,13 @@ var vVoyage = new Vue( {
     ShpRemove: function( oShp, indx ){
         playAudioFile( 1 );
         snck.q( oShp.name + " has been|decommissioned." );
+        this.ShpVoyRemove( oShp.name );
         this.aShps.splice( indx, 1 );  //  TODO Cascade del voyages
+    },
+    ShpVoyRemove: function( sShipName ){
+        this.aShpVoys = this.aShpVoys.filter( function( e ){
+            return ( e.ship.name.toLowerCase() !== sShipName.toLowerCase() );
+        } );
     },
     VoySelect : function(){  //  Drop-down Selected
         if( this.VoySelectValue !== "Add" ){
