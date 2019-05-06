@@ -122,8 +122,8 @@ main {
 	display: grid;
 	grid-template-columns: 60% 40%;
 }
-main>section {
-	min-height: calc( 100vh - 32px);
+main > section {
+
 	background-color: #fff;
 }
 main section article {
@@ -132,6 +132,10 @@ main section article {
 	background-color: #fff;
 	margin: 8px;
 	padding: 8px;
+}
+main section:nth-of-type(1) article {
+	max-height: calc( 100vh - 78px);
+	min-height: calc( 100vh - 78px);
 }
 main section:nth-of-type(1) article aside {
 	display: grid;
@@ -152,13 +156,14 @@ main section article header {
 	border-bottom: 1px solid #ddd;
 }
 .voy--cont {
-	max-height: calc( 100vh - 112px);
-	min-height: 480px;
+    max-height: calc( 100vh - 112px);
+    min-height: calc( 100vh - 224px);
 	overflow-y: scroll;
 	overflow-x: hidden;
 	background-image: url('../../talented/rebel_bg.jpg');
 	background-size: 100%;
-	background-clip: content-box;
+    background-clip: content-box;
+    background-repeat: no-repeat;
 }
 .voy--grd {
 	display: grid;
@@ -196,8 +201,8 @@ main section article header {
 	fill: #733d41;
 }
 .shp--cont {
-	max-height: calc( 50vh - 224px);
-	min-height: 48px;
+	max-height: calc( 50vh - 186px);
+	min-height: calc( 50vh - 186px);
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
