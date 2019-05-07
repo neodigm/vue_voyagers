@@ -32,5 +32,8 @@
     "axios": "^0.18.0",
     "jest": "^24.7.1",
     "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "chart.js": "^2.8.0"
   }
 }
