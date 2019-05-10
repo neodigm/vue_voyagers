@@ -150,6 +150,8 @@
         </section>
     </main>
 
+
+
     <a55-rv class="l-reveal"><!-- Component Begin --> 
         <aside id="id-reveal__scrim" class="close-reveal-modal"></aside> 
     </a55-rv><!-- Component End --> 
@@ -162,8 +164,10 @@
     </ltdc-snackbar><!--  Component End  -->
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">
 <script src="js/vue.min.js"></script>
+<script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 <script defer src="js/snackbar/snackbar.js"></script>
 <script defer src="js/reveal/reveal.js"></script>
+
 
 <script>
 'use strict';
@@ -209,7 +213,7 @@ var vVoyage = new Vue( {
           const NUM_COMPLETE = 4, NUM_NOT_COMPLETE_ONE = 1, NUM_NOT_COMPLETE_TWO = 2;
           if( this.RESTCount === NUM_NOT_COMPLETE_ONE ) snck.q("Loading ...");
           if( this.RESTCount === NUM_NOT_COMPLETE_TWO ){
-              if( this.one2ten() >= 7 ) snck.q("Please Wait ...");
+              if( this.one2ten() >= 6 ) snck.q("Please Wait ...");
           }
           if( this.RESTCount === NUM_COMPLETE ) this.RESTPost();  //  Init Sort and Gen Rank
       }
@@ -472,6 +476,9 @@ function playAudioRand( aSound ){  //  Either Or | array | max 2
 }
 
 console.log("%c Scott C. Krause | Problem Solver and Visual Storyteller", "background: #000; color: #f4dc5e; font-size: 28px");
+setTimeout(function(){
+    a55Rev.autoOpen("js-rev__splash--id");
+}, 3800);
 </script>
 <script type="application/ld+json">
 {
@@ -493,6 +500,22 @@ console.log("%c Scott C. Krause | Problem Solver and Visual Storyteller", "backg
     "https://twitter.com/neodigm24"]
 }
 </script>
+
+<a55-rv class="l-reveal reveal__init">
+    <div id="js-rev__splash--id" class="reveal-modal small" data-reveal aria-hidden="true"
+    style="border-radius: 44px;background-color: #444; text-align: center;background-image:url(usb/privacy/paranoid/blackbg.jpg);border-radius: 48px 12px;">
+      <a class="close-reveal-modal resp_x eml-msg__x">
+        <svg fill="#FFF" height="48" viewBox="0 0 22 22" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+      </a>
+        <section style="text-align: center!important;margin: 0 auto;width: 66%;">
+        <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">
+        <a href="https://twitter.com/hashtag/StarWars?src=hash&amp;ref_src=twsrc%5Etfw">#StarWars</a>
+        <a href="https://twitter.com/hashtag/UX?src=hash&amp;ref_src=twsrc%5Etfw">#UX</a> coding challenge. Consume the Star Wars universe with
+        <a href="https://twitter.com/hashtag/VueJS?src=hash&amp;ref_src=twsrc%5Etfw">#VueJS</a> .<br><br>A coding exercise designed to demonstrate proficiency in the Vue.js framework. The technologies include advanced CSS, semantic markup, browser native APIs, accessible content.<a href="https://t.co/qJbpxRVQge">https://t.co/qJbpxRVQge</a> <a href="https://t.co/Y3kPXlpnpZ">pic.twitter.com/Y3kPXlpnpZ</a></p>&mdash; neodigm24 (@neodigm24) <a href="https://twitter.com/neodigm24/status/1125809895872311301?ref_src=twsrc%5Etfw">May 7, 2019</a></blockquote>
+        </section>
+    </div>
+</a55-rv>
+
 
 </body>
 </html>
