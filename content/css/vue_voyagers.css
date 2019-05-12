@@ -219,6 +219,13 @@ main section article header {
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
+.shp__cont--bg {
+	background-position: center; 
+	background-image: url('../../talented/vue_js_ship.png');
+	background-size: 64%;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+}
 .shp--grd {
 	display: grid;
 	grid-template-columns: repeat( auto-fill, 25%);

@@ -91,7 +91,7 @@
                     v-on:click.prevent="ShpCTA()"> {{ ShpMicrocopy[1] }} </a>
                 </form>
                 <aside class="h-tx__ctr"><div>Ship Name</div><div>Crew Count</div><div>Model</div><div>Actions</div></aside>
-                <div class="shp--cont">
+                <div class="shp--cont shp__cont--bg">
                     <section class="shp--grd" role="row"
                         v-for="(oShp, index) in aShps">
                         <div> {{ oShp.name }} </div>
@@ -214,9 +214,7 @@ var vVoyage = new Vue( {
         const PROPERTY_CNT = "species";
         let oCounter = {}, aCounter = [];
         this.aPeopleSel.forEach( function( _e ){
-            if( !oCounter[ _e[ PROPERTY_CNT ] ] ){
-                oCounter[ _e[ PROPERTY_CNT ] ] = 0;
-            }
+            if( !oCounter[ _e[ PROPERTY_CNT ] ] ) oCounter[ _e[ PROPERTY_CNT ] ] = 0;
             oCounter[ _e[ PROPERTY_CNT ] ]++;
         } );
         Object.keys( oCounter ).forEach( function( _k ){
