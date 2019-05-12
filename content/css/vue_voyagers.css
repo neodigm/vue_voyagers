@@ -226,6 +226,13 @@ main section article header {
     background-clip: content-box;
     background-repeat: no-repeat;
 }
+.shp__cont--scape {
+	background-position: center; 
+	background-image: url('../../talented/scape.jpg');
+	background-size: 100%;
+    background-clip: content-box;
+    background-repeat: no-repeat;
+}
 .shp--grd {
 	display: grid;
 	grid-template-columns: repeat( auto-fill, 25%);
