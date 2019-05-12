@@ -72,6 +72,8 @@
                       </div>
                     </section>
                 </div>
+                <div class="visual__data--species">
+                </div>
             </article>
         </section>
         <section>
@@ -164,9 +166,10 @@
     </ltdc-snackbar><!--  Component End  -->
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">
 <script src="js/vue.min.js"></script>
-<script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
 <script defer src="js/snackbar/snackbar.js"></script>
 <script defer src="js/reveal/reveal.js"></script>
+<script src="js/d3.min.js"></script>
 
 
 <script>
@@ -206,6 +209,20 @@ var vVoyage = new Vue( {
         if( this.aPeopleSel.length === 0 )
             aRet = [false, "Add Voyagers","Add one or more Voyagers with|at least one being a captain."];
         return aRet;
+    },
+    aPeopleSel_species: function(){  //  Rollup Chart Data
+        const PROPERTY_CNT = "species";
+        let oCounter = {}, aCounter = [];
+        this.aPeopleSel.forEach( function( _e ){
+            if( !oCounter[ _e[ PROPERTY_CNT ] ] ){
+                oCounter[ _e[ PROPERTY_CNT ] ] = 0;
+            }
+            oCounter[ _e[ PROPERTY_CNT ] ]++;
+        } );
+        Object.keys( oCounter ).forEach( function( _k ){
+            aCounter.push( { "label": _k, "value": oCounter[ _k ] } );
+        } );
+        return aCounter;
     }
   },
   watch: {
@@ -216,6 +233,15 @@ var vVoyage = new Vue( {
               if( this.one2ten() >= 6 ) snck.q("Please Wait ...");
           }
           if( this.RESTCount === NUM_COMPLETE ) this.RESTPost();  //  Init Sort and Gen Rank
+      },
+      aPeopleSel: function(){
+d3.select(".visual__data--species").selectAll("div").remove();
+d3.select(".visual__data--species") //  d3.js dynamic charting
+  .selectAll("div")
+    .data( this.aPeopleSel_species )
+  .enter().append("div")
+    .style("width", function( d ) { return d.value * 40 + 84 + "px"; })
+    .text(function( d ) { return ( d.label + " | " + d.value ); });
       }
   },
   methods: {
@@ -349,6 +375,7 @@ var vVoyage = new Vue( {
         return PlanetName;
     },
     RESTPost : function(){  //  Init Sort by Name
+        let _v = this;
         this.aStarships = this.aStarships.sort( ( a, b ) => {
             return ( a.model > b.model ) - ( a.model < b.model );
         });
@@ -364,6 +391,12 @@ var vVoyage = new Vue( {
             p.homeworld = vVoyage.getPlanetName( p.homeworld );
             p.species = vVoyage.getSpeciesName( p.species[0] );
         });
+
+//  Init some random data
+this.aPeople.filter( function( _o ){
+    if( _v.one2ten()  === 4 ) _v.aPeopleSel.push( _o );
+} );
+
     },
     fRESTstarships : function( url = "https://swapi.co/api/starships/" ){
         let jResults=[];
@@ -475,7 +508,7 @@ function playAudioRand( aSound ){  //  Either Or | array | max 2
   playAudioFile( aSound[Math.random()+.5|0]);
 }
 
-console.log("%c Scott C. Krause | Problem Solver and Visual Storyteller", "background: #000; color: #f4dc5e; font-size: 28px");
+console.log("%c Scott C. Krause ⚡ Problem Solver and Visual Storyteller", "background: #000; color: #f4dc5e; font-size: 28px");
 setTimeout(function(){
     a55Rev.autoOpen("js-rev__splash--id");
 }, 3800);
@@ -503,11 +536,11 @@ setTimeout(function(){
 
 <a55-rv class="l-reveal reveal__init">
     <div id="js-rev__splash--id" class="reveal-modal small" data-reveal aria-hidden="true"
-    style="border-radius: 44px;background-color: #444; text-align: center;background-image:url(usb/privacy/paranoid/blackbg.jpg);border-radius: 48px 12px;">
+    style="border-radius: 44px;background-color: #777; text-align: center;border-radius: 48px 12px;">
       <a class="close-reveal-modal resp_x eml-msg__x">
         <svg fill="#FFF" height="48" viewBox="0 0 22 22" width="48" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
       </a>
-        <section style="text-align: center!important;margin: 0 auto;width: 66%;">
+        <section style="text-align: center!important;margin: 0 auto;width: 488px;">
         <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">
         <a href="https://twitter.com/hashtag/StarWars?src=hash&amp;ref_src=twsrc%5Etfw">#StarWars</a>
         <a href="https://twitter.com/hashtag/UX?src=hash&amp;ref_src=twsrc%5Etfw">#UX</a> coding challenge. Consume the Star Wars universe with

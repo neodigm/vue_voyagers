@@ -155,9 +155,22 @@ main section article header {
 	text-align: left;
 	border-bottom: 1px solid #ddd;
 }
+.visual__data--species {
+	background-color: #f6f6f6;
+	min-height: 224px;
+	height: 100%;
+}
+.visual__data--species div {
+	font: 10px sans-serif;
+	background-image: linear-gradient(to right, #ffffff 0%, #89595b 100%);
+	text-align: right;
+	padding: 3px;
+	margin: 1px;
+	color: white;
+  }
 .voy--cont {
-    max-height: calc( 100vh - 112px);
-    min-height: calc( 100vh - 224px);
+    max-height: calc( 100vh - 428px);
+    min-height: calc( 100vh - 428px);
 	overflow-y: scroll;
 	overflow-x: hidden;
 	background-image: url('../../talented/rebel_bg.jpg');
@@ -399,7 +412,15 @@ h2 {
     section:nth-of-type(2) form {
         column-gap: 6px;
         margin: 2px 0;
-    }
+	}
+	.visual__data--species {
+		display: none;
+	}
+	.voy--cont {
+		max-height: calc( 100vh - 224px);
+		min-height: calc( 100vh - 224px);		
+	}
+
 }
 @media only screen and (min-width:48.1em) and (max-width:62em) {
     /* medium */
@@ -409,7 +430,14 @@ h2 {
     section:nth-of-type(2) form {
         column-gap: 6px;
         margin: 2px 0;
-    }
+	}
+	.visual__data--species {
+		display: none;
+	}
+	.voy--cont {
+		max-height: calc( 100vh - 224px);
+		min-height: calc( 100vh - 224px);		
+	}
 }
 @media only screen and (min-width:62.1em) {
 	/* large */
