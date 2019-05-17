@@ -79,6 +79,9 @@
         <section>
             <article>
                 <header><h2>Crew Ships</h2>
+<a class="js-truth-bang truth-bang">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/truth_bang.svg" alt="Vivid Truth Bang">
+</a>  
                 </header>
                 <form  novalidate="novalidate" role="form">
                     <input maxlength="32" type="text" placeholder="* Ship Name"
@@ -174,6 +177,7 @@
 
 <script>
 'use strict';
+let oD = document;
 
 var vVoyage = new Vue( {
   el: "#js-main",
@@ -506,7 +510,37 @@ function playAudioRand( aSound ){  //  Either Or | array | max 2
   playAudioFile( aSound[Math.random()+.5|0]);
 }
 
+oD.getElementsByClassName( "js-truth-bang" )[0].addEventListener("click",function(e){ doFS(); }, true);
+function doFS(){
+    playAudioFile( 6 );
+    var _dE = oD.documentElement;
+    if (_dE.requestFullscreen) {
+        _dE.requestFullscreen();
+    }
+    else if (_dE.mozRequestFullScreen) {
+        _dE.mozRequestFullScreen();
+    }
+    else if (_dE.webkitRequestFullScreen) {
+        _dE.webkitRequestFullScreen();
+    }
+    else if (_dE.msRequestFullscreen) {
+        _dE.msRequestFullscreen();
+    }
+}
+function closeFS() {
+  if (oD.exitFullscreen) {
+    oD.exitFullscreen();
+  } else if (oD.mozCancelFullScreen) { /* Firefox */
+    oD.mozCancelFullScreen();
+  } else if (oD.webkitExitFullscreen) { /* Chrome, Safari and Opera */
+    oD.webkitExitFullscreen();
+  } else if (oD.msExitFullscreen) { /* IE/Edge */
+    oD.msExitFullscreen();
+  }
+}
+oD.addEventListener( "contextmenu", function(e) { playAudioFile( 7 ); });  //  On right-click
 console.log("%c Scott C. Krause ⚡ Problem Solver and Visual Storyteller", "background: #000; color: #f4dc5e; font-size: 28px");
+
 setTimeout(function(){
     a55Rev.autoOpen("js-rev__splash--id");
 }, 3800);
