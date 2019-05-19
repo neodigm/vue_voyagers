@@ -435,6 +435,15 @@ h2 {
 }
 /* Vivid Vector End   */ 
 
+/* svg icons Begin */
+.cptn-intract__vect{
+	fill: #4d473c;
+}
+.cptn-intract__vect:hover{
+	fill: #490100;
+}
+/* svg icons End   */
+
 @media only screen and (max-width:48em) {
 	/* small */
 	main {
