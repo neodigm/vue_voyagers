@@ -602,27 +602,6 @@ setTimeout(function(){
 	oD.querySelector( ".alpha-grd" ).classList.add("alpha-grd__hide");
 }, 22000);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 let rand_brand = "ltd";
 
 function displayMsg( sMsg ){
@@ -633,7 +612,7 @@ function displayMsg( sMsg ){
         return;
     } else if (Notification.permission === "granted") {
         // If it's okay let's create a notification
-                var notification = new Notification( Nowish(), {icon: "https://lumiere-a.akamaihd.net/v1/images/r5-g9-main_bbba3627.jpeg?region=0%2C0%2C1280%2C720&width=768", body: sMsg} );
+        var notification = new Notification( Nowish(), {icon: "https://lumiere-a.akamaihd.net/v1/images/r5-g9-main_bbba3627.jpeg?region=0%2C0%2C1280%2C720&width=768", body: sMsg} );
     } else if (Notification.permission !== "denied") {
         // Otherwise, we need to ask the user for permission
 
@@ -651,8 +630,8 @@ function getRandomInt(min, max) {
 }
 
 (function(){
-	var aMessageLSC = ["Vue.js is the progressive framework.", "D3.js is for data driven documents.","It is my JavaScript you seek - Yoda","Luke, I am your father..","I find your lack of faith disturbing - Daddy Darth"];
-	var aMessageLTD = ["It's not my fault. – Han Solo.","Your focus determines your reality. - Qui-Gon Jinn","Do. Or do not. There is no try. – Yoda","In my experience there is no such thing as luck. – Obi-Wan Kenobi", "It's a trap! – Admiral Ackbar"];
+	var aMessageLSC = ["Vue.js is the progressive framework.", "D3.js is for data driven documents.","It is my JavaScript you seek - Yoda","Luke, I am your father..","I find your lack of faith disturbing - Daddy Darth", "Your eyes can deceive you. Don’t trust them. - Obi-Wan Kenobi"];
+	var aMessageLTD = ["It's not my fault. – Han Solo.","Your focus determines your reality. - Qui-Gon Jinn","Do. Or do not. There is no try. – Yoda","In my experience there is no such thing as luck. – Obi-Wan Kenobi", "It's a trap! – Admiral Ackbar", "Never tell me the odds. – Han Solo"];
 	var iTime = 10000;
 	for (var i=1; i < 41; i++){
 		setTimeout(function(){
