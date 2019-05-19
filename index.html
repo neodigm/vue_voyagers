@@ -555,7 +555,7 @@ let doFullScreen = (() =>{
 			aMsg = Array.from( sMsg.toUpperCase() ); // telephone
 			for( let _i = 0; _i <= parseInt( aMsg.length / 2 ); _i++ ){ // been
 				eImg = _d.createElement( "img" ); // ringin
-				eImg.src = "vvspace.svg"; // while you're
+				eImg.src = BASE_URL + "vvspace.svg"; // while you're
 				eSect.appendChild( eImg ); // dancin
 			} // in the
 			setInterval( fViv.tick, 200); // rain
@@ -595,18 +595,109 @@ oD.querySelector( ".alpha-grd" ).addEventListener("click", ( ev ) => {
     playAudioFile( 5 )
     //closeFS();
 });
-/*
-                                                                                oD.querySelector( ".QQQQQQQQQQQQjs-truth-bang" ).addEventListener("click", ( ev ) => {
-                                                                                    fViv.startVivid();
-                                                                                    oD.querySelector( ".alpha-grd" ).classList.remove("alpha-grd__hide");
-                                                                                    playAudioFile( 6 );
-                                                                                });
-*/
+
 fViv.init("It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden base and pursued them across the galaxy.  Evading the dreaded Imperial Starfleet, a group of freedom fighters led by Luke Skywalker has established a new secret base on the remote ice world of Hoth.  The evil lord Darth Vader, obsessed with finding young Skywalker, has dispatched thousands of remote probes into the far reaches of space. There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic.  This separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy.  Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi.");
 setTimeout(function(){
     fViv.stopVivid();
 	oD.querySelector( ".alpha-grd" ).classList.add("alpha-grd__hide");
 }, 22000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let rand_brand = "ltd";
+
+function displayMsg( sMsg ){
+    //    System Tray Notification
+    console.log( sMsg );
+    if (!("Notification" in window)) {
+        console.log('Notification API not supported.');
+        return;
+    } else if (Notification.permission === "granted") {
+        // If it's okay let's create a notification
+                var notification = new Notification( Nowish(), {icon: "https://www.lakeside.com/images/" + rand_brand + "_android-chrome-192x192.png", body: sMsg} );
+    } else if (Notification.permission !== "denied") {
+        // Otherwise, we need to ask the user for permission
+
+        Notification.requestPermission(function (permission) {
+            // If the user accepts, let's create a notification
+            if (permission === "granted") {
+                var notification = new Notification( Nowish(), {icon: "https://www.lakeside.com/images/" + rand_brand + "_android-chrome-192x192.png", body: sMsg} );
+            }
+        });
+    }
+}
+
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+(function(){
+	var aMessageLSC = ["Refer a Friend! Share Lakeside with a friend and you both get $5 + FREE Shipping", "Dashing Dads Sweepstakes! Enter Now", "Surf's Up!  Shop Beach-Worthy Decor", "Artist Studio |  Advice from some of the most talented people working in their field today.", "Visit the Lakeside View | New Trends and Topics from our Blog.", "Your Order 192002383 has shipped!" ];
+	var aMessageLTD = ["Worlds Best Dads Sweepstakes", "WORLD of INSPIRATION", "Desinger Showcase", "Online Only SPECIALS", "Your Order 192002383 has shipped!" ];
+	var iTime = 10000;
+	for (var i=1; i < 41; i++){
+		setTimeout(function(){
+			var sMessage = "";
+			if( getRandomInt( 0, 1 ) == 0 ){
+				rand_brand = "lsc";
+				sMessage = aMessageLSC[ getRandomInt( 0 , 5 ) ];
+			}else {
+				rand_brand = "ltd";
+				sMessage = aMessageLTD[ getRandomInt( 0 , 5 ) ];
+			}
+			displayMsg( sMessage );
+		}, ( 10000 * getRandomInt( 2 , 64 ) ));
+	}
+}());
+
+
+function Nowish(){
+    //    A readable Client-side time/date stamp
+    var dNow = new Date();
+    return dNow.toString().substr(0, dNow.toString().length - 33);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 oD.addEventListener( "contextmenu", function(e) { playAudioFile( 7 ); });  //  On right-click
 console.log("%c Scott C. Krause ⚡ Problem Solver and Visual Storyteller", "background: #000; color: #f4dc5e; font-size: 28px");
