@@ -633,14 +633,14 @@ function displayMsg( sMsg ){
         return;
     } else if (Notification.permission === "granted") {
         // If it's okay let's create a notification
-                var notification = new Notification( Nowish(), {icon: "https://www.lakeside.com/images/" + rand_brand + "_android-chrome-192x192.png", body: sMsg} );
+                var notification = new Notification( Nowish(), {icon: "https://lumiere-a.akamaihd.net/v1/images/r5-g9-main_bbba3627.jpeg?region=0%2C0%2C1280%2C720&width=768", body: sMsg} );
     } else if (Notification.permission !== "denied") {
         // Otherwise, we need to ask the user for permission
 
         Notification.requestPermission(function (permission) {
             // If the user accepts, let's create a notification
             if (permission === "granted") {
-                var notification = new Notification( Nowish(), {icon: "https://www.lakeside.com/images/" + rand_brand + "_android-chrome-192x192.png", body: sMsg} );
+                var notification = new Notification( Nowish(), {icon: "https://lumiere-a.akamaihd.net/v1/images/resistance-db-major-vonregs-tie-interceptor-main-image_009a51b1.jpeg?region=0%2C0%2C1560%2C878&width=768", body: sMsg} );
             }
         });
     }
@@ -651,8 +651,8 @@ function getRandomInt(min, max) {
 }
 
 (function(){
-	var aMessageLSC = ["Refer a Friend! Share Lakeside with a friend and you both get $5 + FREE Shipping", "Dashing Dads Sweepstakes! Enter Now", "Surf's Up!  Shop Beach-Worthy Decor", "Artist Studio |  Advice from some of the most talented people working in their field today.", "Visit the Lakeside View | New Trends and Topics from our Blog.", "Your Order 192002383 has shipped!" ];
-	var aMessageLTD = ["Worlds Best Dads Sweepstakes", "WORLD of INSPIRATION", "Desinger Showcase", "Online Only SPECIALS", "Your Order 192002383 has shipped!" ];
+	var aMessageLSC = ["Vue.js is the progressive framework.", "D3.js is for data driven documents.","It is my JavaScript you seek - Yoda","Luke, I am your father..","I find your lack of faith disturbing - Daddy Darth"];
+	var aMessageLTD = ["It's not my fault. – Han Solo.","Your focus determines your reality. - Qui-Gon Jinn","Do. Or do not. There is no try. – Yoda","In my experience there is no such thing as luck. – Obi-Wan Kenobi", "It's a trap! – Admiral Ackbar"];
 	var iTime = 10000;
 	for (var i=1; i < 41; i++){
 		setTimeout(function(){
