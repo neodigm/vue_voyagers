@@ -481,8 +481,8 @@ if (AudioContext) {
   CnfState.audio = true;    //    Icanuse
   var oAudContx = new AudioContext();    //    HTML5 Audio
   var oAJAXReq = new XMLHttpRequest();   //    Get Sounds
-  var aAudioBuffer = new Array(8);       //    Store Sound files
-  var fetchSoundConfig = {sound_max: 8, sound_current: 1};    //    Sound limits
+  var aAudioBuffer = new Array(18);       //    Store Sound files
+  var fetchSoundConfig = {sound_max: 18, sound_current: 1};    //    Sound limits
   setTimeout( function(){ fetchSound(); }, 4800);
 }
 function fetchSound() {
@@ -507,6 +507,7 @@ function fetchSoundonload() {
 function playAudioFile( nSound ) {
   if( CnfState.audio === true ){  //  Play MP3 if sound toggle is true
     try{
+        nSound = nSound + 8;
       var oSrc = oAudContx.createBufferSource();
       var volume = oAudContx.createGain();
       oSrc.buffer = aAudioBuffer[nSound];
@@ -654,28 +655,6 @@ function Nowish(){
     var dNow = new Date();
     return dNow.toString().substr(0, dNow.toString().length - 33);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 oD.addEventListener( "contextmenu", function(e) { playAudioFile( 7 ); });  //  On right-click
