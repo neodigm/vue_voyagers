@@ -418,10 +418,10 @@ h2 {
     cursor: pointer;
     display: grid;
     grid-template-columns: repeat( auto-fill, minmax(26px, 64px));
-    background-image: linear-gradient(to bottom, #490100 0%, #993300 100%);
+	background-image: linear-gradient(to bottom, #490100 10%, #000 90%);
     padding: 24px;
 }
-.alpha-grd img { max-width: 64px; }
+.alpha-grd img { max-width: 64px; margin: 8px 12px;}
 .alpha-grd__hide { display: none; }
 .truth-bang {
     cursor: pointer;
