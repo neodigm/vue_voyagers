@@ -4,7 +4,9 @@
 
 [Vue.js Star Wars Responsive view](https://material.io/tools/resizer/#url=https%3A%2F%2Fneodigm.github.io%2Fvue_voyagers%2F) 
 
-# Options Travel Requirements:
+![](https://neodigm.github.io/vue_voyagers/vuejs_space_travel_app.png)
+
+# Client Requirements:
 
 Use Vue.js
 
