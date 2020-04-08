@@ -1,10 +1,16 @@
-# vue_voyagers
+# Vue.js Voyagers - Gamified Travel App
 
-[Vue.js Star Wars programming challenge](https://neodigm.github.io/vue_voyagers/index.html) 
+![](https://neodigm.github.io/vue_voyagers/vuejs_space_travel_app.png)
 
-[Vue.js Star Wars Responsive view](https://material.io/tools/resizer/#url=https%3A%2F%2Fneodigm.github.io%2Fvue_voyagers%2F) 
+[Vue.js D3.js Star Wars programming challenge](https://neodigm.github.io/vue_voyagers/index.html) 
 
-# Options Travel Requirements:
+[Vue.js D3.js Star Wars Responsive view](https://material.io/tools/resizer/#url=https%3A%2F%2Fneodigm.github.io%2Fvue_voyagers%2F) 
+
+[Vue.js D3.js Star Wars LinkedIn Post](https://www.linkedin.com/feed/update/urn:li:activity:6533433750137778176)
+
+[Vue.js D3.js Star Wars Tweet](https://twitter.com/hashtag/neodigm24?src=hash&amp;ref_src=twsrc%5Etfw)
+
+# Client Requirements:
 
 Use Vue.js
 
