@@ -1,3 +1,5 @@
+[![License: BSD](https://badgen.net/badge/license/BSD/orange)](https://opensource.org/licenses/BSD-3-Clause)
+
 # Vue.js Voyagers - Gamified Travel App
 
 ![](https://neodigm.github.io/vue_voyagers/vuejs_space_travel_app.png)
