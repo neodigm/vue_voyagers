@@ -31,6 +31,7 @@ Add any other creative ideas you think this UI might benefit from.
 See attached UI example.
 
 [Portfolio](https://www.theScottKrause.com) |
+[Blog](https://www.theScottKrause.com/WebAssembly) |
 [Github](https://github.com/neodigm) |
 [LinkedIn](https://www.linkedin.com/in/neodigm24/) |
 [Salesforce](https://trailblazer.me/id/skrause) |
