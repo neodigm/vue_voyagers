@@ -28,8 +28,6 @@ Have the ability to assign a captain.
 
 Add any other creative ideas you think this UI might benefit from.
 
-See attached UI example.
-
 [Portfolio](https://www.theScottKrause.com) |
 [Blog](https://www.theScottKrause.com/WebAssembly) |
 [Github](https://github.com/neodigm) |
