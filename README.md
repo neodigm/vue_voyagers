@@ -29,7 +29,7 @@ Have the ability to assign a captain.
 Add any other creative ideas you think this UI might benefit from.
 
 [Portfolio](https://www.theScottKrause.com) |
-[Blog](https://www.theScottKrause.com/WebAssembly) |
+[Blog](https://www.theScottKrause.com/neodigm-wasm-golang) |
 [Github](https://github.com/neodigm) |
 [LinkedIn](https://www.linkedin.com/in/neodigm24/) |
 [Salesforce](https://trailblazer.me/id/skrause) |
