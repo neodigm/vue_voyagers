@@ -28,9 +28,8 @@ Have the ability to assign a captain.
 
 Add any other creative ideas you think this UI might benefit from.
 
-[Portfolio](https://www.theScottKrause.com) |
-[Blog](https://www.theScottKrause.com/neodigm-wasm-golang) |
-[NPM 🗿](https://www.npmjs.com/~neodigm) |
+[Portfolio Blog](https://www.theScottKrause.com) |
+[NPM](https://www.npmjs.com/~neodigm) |
 [Github](https://github.com/neodigm) |
 [LinkedIn](https://www.linkedin.com/in/neodigm24/) |
 [Salesforce](https://trailblazer.me/id/skrause) |
@@ -38,4 +37,5 @@ Add any other creative ideas you think this UI might benefit from.
 [Machvive](https://machvive.com/) |
 [Arcanus 55](https://www.arcanus55.com/) |
 [Repl](https://repl.it/@neodigm) |
-[Twitter](https://twitter.com/neodigm24)
+[Twitter](https://twitter.com/neodigm24) |
+[Keybase](https://keybase.io/neodigm)
