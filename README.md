@@ -29,6 +29,9 @@ Have the ability to assign a captain.
 
 Add any other creative ideas you think this UI might benefit from.
 
+---
+![](https://repository-images.githubusercontent.com/178555357/2b6ad880-7aa0-11ea-8dde-63e70187e3e9)
+#
 [Portfolio Blog](https://www.theScottKrause.com) |
 [NPM](https://www.npmjs.com/~neodigm) |
 [Github](https://github.com/neodigm) |
@@ -40,3 +43,4 @@ Add any other creative ideas you think this UI might benefit from.
 [Repl](https://repl.it/@neodigm) |
 [Twitter](https://twitter.com/neodigm24) |
 [Keybase](https://keybase.io/neodigm)
+#
