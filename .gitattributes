@@ -3,3 +3,4 @@
 *.css linguist-detectable=false
 *.js linguist-detectable=true
 *.ts linguist-detectable=true
+*.go linguist-detectable=true
