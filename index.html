@@ -419,7 +419,7 @@ this.aPeople.filter( function( _o ){
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aStarships = vVoyage.aStarships.concat( jResults );
                 if( rest.next ){
-                    vVoyage.fRESTstarships( rest.next.replace("http:","https"), vVoyage.aStarships );
+                    vVoyage.fRESTstarships( rest.next.replace("http:","https:"), vVoyage.aStarships );
                 }else{ vVoyage.RESTCount++; }
             });
     },
@@ -431,7 +431,7 @@ this.aPeople.filter( function( _o ){
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aPeople = vVoyage.aPeople.concat( jResults );
                 if( rest.next ){
-                    vVoyage.fRESTpeople( rest.next.replace("http:","https"), vVoyage.aPeople );
+                    vVoyage.fRESTpeople( rest.next.replace("http:","https:"), vVoyage.aPeople );
                 }else{ vVoyage.RESTCount++; }
             });
     },
@@ -443,7 +443,7 @@ this.aPeople.filter( function( _o ){
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aPlanets = vVoyage.aPlanets.concat( jResults );
                 if( rest.next ){
-                    vVoyage.fRESTplanets( rest.next.replace("http:","https"), vVoyage.aPlanets );
+                    vVoyage.fRESTplanets( rest.next.replace("http:","https:"), vVoyage.aPlanets );
                 }else{ vVoyage.RESTCount++; }
             });
     },
@@ -455,7 +455,7 @@ this.aPeople.filter( function( _o ){
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aSpecies = vVoyage.aSpecies.concat( jResults );
                 if( rest.next ){
-                    vVoyage.fRESTSpecies( rest.next.replace("http:","https"), vVoyage.aSpecies );
+                    vVoyage.fRESTSpecies( rest.next.replace("http:","https:"), vVoyage.aSpecies );
                 }else{ vVoyage.RESTCount++; }
             });
     },
