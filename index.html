@@ -419,7 +419,9 @@ this.aPeople.filter( function( _o ){
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aStarships = vVoyage.aStarships.concat( jResults );
                 if( rest.next ){
-                    vVoyage.fRESTstarships( rest.next.replace("http:","https:"), vVoyage.aStarships );
+                    rest.next = rest.next.replace("http:","https:");
+console.log( "------- | " + rest.next );
+                    vVoyage.fRESTstarships( rest.next, vVoyage.aStarships );
                 }else{ vVoyage.RESTCount++; }
             });
     },
@@ -431,7 +433,9 @@ this.aPeople.filter( function( _o ){
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aPeople = vVoyage.aPeople.concat( jResults );
                 if( rest.next ){
-                    vVoyage.fRESTpeople( rest.next.replace("http:","https:"), vVoyage.aPeople );
+                    rest.next = rest.next.replace("http:","https:");
+console.log( "------- | " + rest.next );
+                    vVoyage.fRESTpeople( rest.next, vVoyage.aPeople );
                 }else{ vVoyage.RESTCount++; }
             });
     },
@@ -443,7 +447,9 @@ this.aPeople.filter( function( _o ){
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aPlanets = vVoyage.aPlanets.concat( jResults );
                 if( rest.next ){
-                    vVoyage.fRESTplanets( rest.next.replace("http:","https:"), vVoyage.aPlanets );
+                    rest.next = rest.next.replace("http:","https:");
+console.log( "------- | " + rest.next );
+                    vVoyage.fRESTplanets( rest.next, vVoyage.aPlanets );
                 }else{ vVoyage.RESTCount++; }
             });
     },
@@ -455,7 +461,9 @@ this.aPeople.filter( function( _o ){
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aSpecies = vVoyage.aSpecies.concat( jResults );
                 if( rest.next ){
-                    vVoyage.fRESTSpecies( rest.next.replace("http:","https:"), vVoyage.aSpecies );
+                    rest.next = rest.next.replace("http:","https:");
+console.log( "------- | " + rest.next );
+                    vVoyage.fRESTSpecies( rest.next, vVoyage.aSpecies );
                 }else{ vVoyage.RESTCount++; }
             });
     },
