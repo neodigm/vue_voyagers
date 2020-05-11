@@ -375,7 +375,7 @@ d3.select(".visual__data--species") //  d3.js dynamic charting
         } );
         return bExists;
     },
-    getSpeciesName : function( SpeciesURL = "https://swapi.co/api/species/4/" ){
+    getSpeciesName : function( SpeciesURL = "https://swapi.dev/api/species/4/" ){
         let SpeciesName = this.aSpecies.filter( function( e ){
             return ( SpeciesURL === e.url ); 
         } )[0].name;
@@ -411,7 +411,7 @@ this.aPeople.filter( function( _o ){
 } );
 
     },
-    fRESTstarships : function( url = "https://swapi.co/api/starships/" ){
+    fRESTstarships : function( url = "https://swapi.dev/api/starships/" ){
         let jResults=[];
         fetch( url )
             .then(( resp ) => resp.json())
@@ -423,7 +423,7 @@ this.aPeople.filter( function( _o ){
                 }else{ vVoyage.RESTCount++; }
             });
     },
-    fRESTpeople : function( url = "https://swapi.co/api/people/" ){
+    fRESTpeople : function( url = "https://swapi.dev/api/people/" ){
         let jResults=[];
         fetch( url )
             .then(( resp ) => resp.json())
@@ -435,7 +435,7 @@ this.aPeople.filter( function( _o ){
                 }else{ vVoyage.RESTCount++; }
             });
     },
-    fRESTplanets : function( url = "https://swapi.co/api/planets/" ){
+    fRESTplanets : function( url = "https://swapi.dev/api/planets/" ){
         let jResults=[];
         fetch( url )
             .then(( resp ) => resp.json())
@@ -447,7 +447,7 @@ this.aPeople.filter( function( _o ){
                 }else{ vVoyage.RESTCount++; }
             });
     },
-    fRESTSpecies : function( url = "https://swapi.co/api/species/" ){
+    fRESTSpecies : function( url = "https://swapi.dev/api/species/" ){
         let jResults=[];
         fetch( url )
             .then(( resp ) => resp.json())
