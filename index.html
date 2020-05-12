@@ -377,19 +377,15 @@ d3.select(".visual__data--species") //  d3.js dynamic charting
     },
     getSpeciesName : function( SpeciesURL = "https://swapi.dev/api/species/4/" ){
         let SpeciesName = this.aSpecies.filter( function( e ){
-console.log( SpeciesURL, "===", e.url ); 
             return ( SpeciesURL === e.url ); 
         } )[0];
         if( typeof SpeciesName != "undefined") SpeciesName = SpeciesName.name;
-console.log( "........ | " + SpeciesName ); 
         return SpeciesName;
     },
     getPlanetName : function( PlanetURL ){
         let PlanetName = this.aPlanets.filter( function( e ){
-console.log( PlanetURL, "===", e.url ); 
             return ( PlanetURL === e.url ); 
         } )[0].name;
-console.log( "........ | " + PlanetName ); 
         return PlanetName;
     },
     RESTPost : function(){  //  Init Sort by Name
@@ -421,13 +417,11 @@ this.aPeople.filter( function( _o ){
         fetch( url )
             .then(( resp ) => resp.json())
             .then(function( rest ) {  //  API Recursive Pagination
-console.log( "======= | " + JSON.stringify( rest.results ).indexOf("http:") );
-rest.results = JSON.parse( JSON.stringify( rest.results ).replace(/^http:\/\//i, 'https://') );
+                rest.results = JSON.parse( JSON.stringify( rest.results ).replace(/^http:\/\//i, 'https://') );
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aStarships = vVoyage.aStarships.concat( jResults );
                 if( rest.next ){
                     rest.next = rest.next.replace("http:","https:");
-console.log( "------- | " + rest.next );
                     vVoyage.fRESTstarships( rest.next, vVoyage.aStarships );
                 }else{ vVoyage.RESTCount++; }
             });
@@ -437,13 +431,11 @@ console.log( "------- | " + rest.next );
         fetch( url )
             .then(( resp ) => resp.json())
             .then(function( rest ) {  //  API Recursive Pagination
-console.log( "======= | " + JSON.stringify( rest.results ).indexOf("http:") );
-rest.results = JSON.parse( JSON.stringify( rest.results ).replace(/^http:\/\//i, 'https://') );
+                rest.results = JSON.parse( JSON.stringify( rest.results ).replace(/^http:\/\//i, 'https://') );
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aPeople = vVoyage.aPeople.concat( jResults );
                 if( rest.next ){
                     rest.next = rest.next.replace("http:","https:");
-console.log( "------- | " + rest.next );
                     vVoyage.fRESTpeople( rest.next, vVoyage.aPeople );
                 }else{ vVoyage.RESTCount++; }
             });
@@ -453,13 +445,11 @@ console.log( "------- | " + rest.next );
         fetch( url )
             .then(( resp ) => resp.json())
             .then(function( rest ) {  //  API Recursive Pagination
-console.log( "======= | " + JSON.stringify( rest.results ).indexOf("http:") );
-rest.results = JSON.parse( JSON.stringify( rest.results ).replace(/^http:\/\//i, 'https://') );
+                rest.results = JSON.parse( JSON.stringify( rest.results ).replace(/^http:\/\//i, 'https://') );
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aPlanets = vVoyage.aPlanets.concat( jResults );
                 if( rest.next ){
                     rest.next = rest.next.replace("http:","https:");
-console.log( "------- | " + rest.next );
                     vVoyage.fRESTplanets( rest.next, vVoyage.aPlanets );
                 }else{ vVoyage.RESTCount++; }
             });
@@ -469,13 +459,11 @@ console.log( "------- | " + rest.next );
         fetch( url )
             .then(( resp ) => resp.json())
             .then(function( rest ) {  //  API Recursive Pagination
-console.log( "======= | " + JSON.stringify( rest.results ).indexOf("http:") );
-rest.results = JSON.parse( JSON.stringify( rest.results ).replace(/^http:\/\//i, 'https://') );
+                rest.results = JSON.parse( JSON.stringify( rest.results ).replace(/^http:\/\//i, 'https://') );
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aSpecies = vVoyage.aSpecies.concat( jResults );
                 if( rest.next ){
                     rest.next = rest.next.replace("http:","https:");
-console.log( "------- | " + rest.next );
                     vVoyage.fRESTSpecies( rest.next, vVoyage.aSpecies );
                 }else{ vVoyage.RESTCount++; }
             });
