@@ -377,14 +377,19 @@ d3.select(".visual__data--species") //  d3.js dynamic charting
     },
     getSpeciesName : function( SpeciesURL = "https://swapi.dev/api/species/4/" ){
         let SpeciesName = this.aSpecies.filter( function( e ){
+console.log( SpeciesURL, "===", e.url ); 
             return ( SpeciesURL === e.url ); 
-        } )[0].name;
+        } )[0];
+        if( typeof SpeciesName != "undefined") SpeciesName = SpeciesName.name;
+console.log( "........ | " + SpeciesName ); 
         return SpeciesName;
     },
     getPlanetName : function( PlanetURL ){
         let PlanetName = this.aPlanets.filter( function( e ){
+console.log( PlanetURL, "===", e.url ); 
             return ( PlanetURL === e.url ); 
         } )[0].name;
+console.log( "........ | " + PlanetName ); 
         return PlanetName;
     },
     RESTPost : function(){  //  Init Sort by Name
