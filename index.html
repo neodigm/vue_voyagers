@@ -416,6 +416,7 @@ this.aPeople.filter( function( _o ){
         fetch( url )
             .then(( resp ) => resp.json())
             .then(function( rest ) {  //  API Recursive Pagination
+console.log( "======= | " + JSON.stringify( rest.results ) );
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aStarships = vVoyage.aStarships.concat( jResults );
                 if( rest.next ){
