@@ -379,7 +379,11 @@ d3.select(".visual__data--species") //  d3.js dynamic charting
         let SpeciesName = this.aSpecies.filter( function( e ){
             return ( SpeciesURL === e.url ); 
         } )[0];
-        if( typeof SpeciesName != "undefined") SpeciesName = SpeciesName.name;
+        if( typeof SpeciesName != "undefined") {
+            SpeciesName = SpeciesName.name;
+        }else{
+            SpeciesName = "Human";
+        }
         return SpeciesName;
     },
     getPlanetName : function( PlanetURL ){
