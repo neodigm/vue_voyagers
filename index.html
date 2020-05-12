@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>A long time ago 👽 in a galaxy far, far away..</title>
+<title>A long time ago 👽 in a galaxy far, far away...</title>
 <!--
   _________             __    __     ____  __.                                  
  /   _____/ ____  _____/  |__/  |_  |    |/ _|___________   __ __  ______ ____  
@@ -416,6 +416,7 @@ this.aPeople.filter( function( _o ){
         fetch( url )
             .then(( resp ) => resp.json())
             .then(function( rest ) {  //  API Recursive Pagination
+console.log( "======= | " + JSON.stringify( rest.results ) );
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aStarships = vVoyage.aStarships.concat( jResults );
                 if( rest.next ){
