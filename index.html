@@ -416,7 +416,8 @@ this.aPeople.filter( function( _o ){
         fetch( url )
             .then(( resp ) => resp.json())
             .then(function( rest ) {  //  API Recursive Pagination
-console.log( "======= | " + JSON.stringify( rest.results ) );
+console.log( "======= | " + JSON.stringify( rest.results ).indexOf("http:") );
+rest.results = JSON.parse( JSON.stringify( rest.results ).replace(/^http:\/\//i, 'https://') );
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aStarships = vVoyage.aStarships.concat( jResults );
                 if( rest.next ){
@@ -431,6 +432,8 @@ console.log( "------- | " + rest.next );
         fetch( url )
             .then(( resp ) => resp.json())
             .then(function( rest ) {  //  API Recursive Pagination
+console.log( "======= | " + JSON.stringify( rest.results ).indexOf("http:") );
+rest.results = JSON.parse( JSON.stringify( rest.results ).replace(/^http:\/\//i, 'https://') );
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aPeople = vVoyage.aPeople.concat( jResults );
                 if( rest.next ){
@@ -445,6 +448,8 @@ console.log( "------- | " + rest.next );
         fetch( url )
             .then(( resp ) => resp.json())
             .then(function( rest ) {  //  API Recursive Pagination
+console.log( "======= | " + JSON.stringify( rest.results ).indexOf("http:") );
+rest.results = JSON.parse( JSON.stringify( rest.results ).replace(/^http:\/\//i, 'https://') );
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aPlanets = vVoyage.aPlanets.concat( jResults );
                 if( rest.next ){
@@ -459,6 +464,8 @@ console.log( "------- | " + rest.next );
         fetch( url )
             .then(( resp ) => resp.json())
             .then(function( rest ) {  //  API Recursive Pagination
+console.log( "======= | " + JSON.stringify( rest.results ).indexOf("http:") );
+rest.results = JSON.parse( JSON.stringify( rest.results ).replace(/^http:\/\//i, 'https://') );
                 jResults = jResults.concat( Array.from( rest.results ) );
                 vVoyage.aSpecies = vVoyage.aSpecies.concat( jResults );
                 if( rest.next ){
