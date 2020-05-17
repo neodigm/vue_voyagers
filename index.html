@@ -410,6 +410,20 @@ d3.select(".visual__data--species") //  d3.js dynamic charting
             p.species = vVoyage.getSpeciesName( p.species[0] );
         });
 
+console.log("------------- aStarships --------------");
+console.log( JSON.stringify(this.aStarships) );
+
+console.log("------------- aPeople --------------");
+console.clear();
+console.log( JSON.stringify(this.aPeople) );
+
+console.log("------------- aPlanets --------------");
+//console.log( JSON.stringify(this.aPlanets) );
+
+console.log("------------- aPeople --------------");
+//console.log( JSON.stringify(this.aPeople) );
+
+
 //  Init some random data
 this.aPeople.filter( function( _o ){
     if( _v.one2ten()  === 4 ) _v.aPeopleSel.push( _o );
