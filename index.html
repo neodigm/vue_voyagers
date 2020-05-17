@@ -409,13 +409,18 @@ d3.select(".visual__data--species") //  d3.js dynamic charting
             p.homeworld = vVoyage.getPlanetName( p.homeworld );
             p.species = vVoyage.getSpeciesName( p.species[0] );
         });
-
+/*
+  aStarships: [],
+  aPeople: [],
+  aPlanets: [],
+  aSpecies: [],
+*/
 console.log("------------- aStarships --------------");
 console.log( JSON.stringify(this.aStarships) );
 
-console.log("------------- aPeople --------------");
+console.log("------------- aSpecies --------------");
 console.clear();
-console.log( JSON.stringify(this.aPeople) );
+console.log( JSON.stringify(this.aSpecies) );
 
 console.log("------------- aPlanets --------------");
 //console.log( JSON.stringify(this.aPlanets) );
