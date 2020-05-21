@@ -27,7 +27,7 @@ Create the ability to assign selected voyagers to a starship to create a Voyage.
 
 Have the ability to assign a captain.
 
-Add any other creative ideas you think this UI might benefit from.
+Add any other interactive data visualization ideas you think this UI might benefit from.
 
 ---
 ![](https://repository-images.githubusercontent.com/178555357/2b6ad880-7aa0-11ea-8dde-63e70187e3e9)
