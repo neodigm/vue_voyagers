@@ -1,7 +1,11 @@
+
+*.svg linguist-detectable=false
 *.html linguist-detectable=false
+*.css linguist-detectable=false
 *.js linguist-detectable=true
 *.ts linguist-detectable=true
 *.go linguist-detectable=true
+*.js linguist-language=TypeScript
 
 # Auto detect text files and perform LF normalization
 * text=auto
