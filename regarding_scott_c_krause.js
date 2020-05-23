@@ -16,6 +16,7 @@
 	    "sameAs" : [ "https://github.com/neodigm",
 	    "https://www.theScottKrause.com/neodigm-wasm-golang",
 "https://www.npmjs.com/~neodigm",
+"https://gist.github.com/neodigm",
 	    "https://www.linkedin.com/in/neodigm24/",
 	    "https://trailblazer.me/id/skrause",
 	    "https://codepen.io/neodigm24",
