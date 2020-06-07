@@ -1,7 +1,7 @@
 [![License: BSD](https://badgen.net/badge/license/BSD/orange)](https://opensource.org/licenses/BSD-3-Clause)
 ![](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
 
-# Vue.js Voyagers - Gamified Travel App
+# Vue.js Voyagers - Gamified Travel App 🚀
 
 ![](https://neodigm.github.io/vue_voyagers/vuejs_space_travel_app.png)
 
@@ -42,5 +42,6 @@ Add any other interactive data visualization ideas you think this UI might benef
 [Arcanus 55](https://www.arcanus55.com/) |
 [Repl](https://repl.it/@neodigm) |
 [Twitter](https://twitter.com/neodigm24) |
-[Keybase](https://keybase.io/neodigm)
+[Keybase](https://keybase.io/neodigm) |
+[Gists](https://gist.github.com/neodigm) |
 #
