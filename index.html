@@ -243,13 +243,14 @@ var vVoyage = new Vue( {
           if( this.RESTCount === NUM_COMPLETE ) this.RESTPost();  //  Init Sort and Gen Rank
       },
       aPeopleSel: function(){
-d3.select(".visual__data--species").selectAll("div").remove();
-d3.select(".visual__data--species") //  d3.js dynamic charting (d3js.org) (http://circos.ca/)
-  .selectAll("div")
-    .data( this.aPeopleSel_species )
-  .enter().append("div")
-    .style("width", function( d ) { return d.value * 40 + 84 + "px"; })
-    .text(function( d ) { return ( d.label + " | " + d.value ); });
+        d3.select(".visual__data--species").selectAll("div").remove();
+        d3.select(".visual__data--species") //  d3.js dynamic charting (d3js.org) (http://circos.ca/)
+        .selectAll("div")
+            .data( this.aPeopleSel_species )
+        .enter().append("div")
+            .style("width", function( d ) { return d.value * 40 + 84 + "px"; })
+            .attr("class", function(d) { return d3.select(this).attr("class") + " visual__data--bg" + d.value; })
+            .text(function( d ) { return ( d.label + " | " + d.value ); });
       },
       aShps: function(){
           if( this.aShps.length == 2 ){

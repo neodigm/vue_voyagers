@@ -163,11 +163,19 @@ main section article header {
 .visual__data--species div {
 	font: 10px sans-serif;
 	background-image: linear-gradient(to right, #ffffff 0%, #89595b 100%);
+	border-radius: 4px;
 	text-align: right;
 	padding: 3px;
 	margin: 1px;
 	color: white;
   }
+.visual__data--bg2 { background-image: linear-gradient(to right, #ffffff 0%, #edba08 100%) !important; }
+.visual__data--bg3 { background-image: linear-gradient(to right, #ffffff 0%, #9BB7D4 100%) !important; }
+.visual__data--bg4 { background-image: linear-gradient(to right, #ffffff 0%, #C74375 100%) !important; }
+.visual__data--bg5 { background-image: linear-gradient(to right, #ffffff 0%, #7BC4C4 100%) !important; }
+.visual__data--bg6 { background-image: linear-gradient(to right, #ffffff 0%, #9B1B30 100%) !important; }
+.visual__data--bg7 { background-image: linear-gradient(to right, #ffffff 0%, #FF6F61 100%) !important; }
+.visual__data--bg8 { background-image: linear-gradient(to right, #ffffff 0%, #009473 100%) !important; }
 .voy--cont {
     max-height: calc( 100vh - 428px);
     min-height: calc( 100vh - 428px);
