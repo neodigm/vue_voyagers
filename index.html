@@ -243,7 +243,7 @@ var vVoyage = new Vue( {
           if( this.RESTCount === NUM_COMPLETE ) this.RESTPost();  //  Init Sort and Gen Rank
       },
       aPeopleSel: function(){
-        d3.select(".visual__data--species").selectAll("div").remove();
+        d3.select(".visual__data--species").selectAll("div").remove(); // Change color by value 2-9
         d3.select(".visual__data--species") //  d3.js dynamic charting (d3js.org) (http://circos.ca/)
         .selectAll("div")
             .data( this.aPeopleSel_species )
