@@ -249,7 +249,7 @@ var vVoyage = new Vue( {
             .data( this.aPeopleSel_species )
         .enter().append("div")
             .style("width", function( d ) { return d.value * 40 + 84 + "px"; })
-            .attr("class", function(d) { return d3.select(this).attr("class") + " visual__data--bg" + d.value; })
+            .attr("class", function(d) { return "visual__data--bg" + d.value; })
             .text(function( d ) { return ( d.label + " | " + d.value ); });
       },
       aShps: function(){
