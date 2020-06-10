@@ -162,6 +162,16 @@ main section article header {
 	height: 100%;
 	overflow: scroll;
 }
+.visual__data--species::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+.visual__data--species::-webkit-scrollbar-track {
+	background: rgba(112, 111, 112, .2);
+}
+.visual__data--species::-webkit-scrollbar-thumb {
+	background: #89595b;
+}
 .visual__data--species div {
 	font: 10px sans-serif;
 	background-image: linear-gradient(to right, #ffffff 0%, #89595b 100%);
