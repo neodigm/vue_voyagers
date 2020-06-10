@@ -249,7 +249,7 @@ var vVoyage = new Vue( {
         .selectAll("div")
             .data( this.aPeopleSel_species )
         .enter().append("div")
-            .style("width", function( d ) { return d.value * 40 + 84 + "px"; })
+            .style("width", function( d ) { return d.value * 28 + 84 + "px"; })
             .attr("class", function(d) { 
                 var colorClass = ( d.value == 1 ) ?  that.one2ten() : d.value;
                 return "visual__data--bg" + colorClass; })
