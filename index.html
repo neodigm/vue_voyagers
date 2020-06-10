@@ -412,10 +412,10 @@ var vVoyage = new Vue( {
             p.species = vVoyage.getSpeciesName( p.species[0] );
         });
 
-//  Init some random data
-this.aPeople.filter( function( _o ){
-    if( _v.one2ten()  >= 4 ) _v.aPeopleSel.push( _o );
-} );
+        //  Init some random data
+        this.aPeople.filter( function( _o ){
+            if( _v.one2ten()  >= 4 ) _v.aPeopleSel.push( _o );
+        } );
 
     },
     fRESTstarships : function( url = "https://swapi.dev/api/starships/" ){
