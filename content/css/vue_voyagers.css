@@ -157,8 +157,10 @@ main section article header {
 }
 .visual__data--species {
 	background-color: #f6f6f6;
+	max-height: 256px;
 	min-height: 224px;
 	height: 100%;
+	overflow: scroll;
 }
 .visual__data--species div {
 	font: 10px sans-serif;
