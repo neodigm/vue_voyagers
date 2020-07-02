@@ -33,6 +33,7 @@ Add any other interactive data visualization ideas you think this UI might benef
 ![](https://repository-images.githubusercontent.com/178555357/2b6ad880-7aa0-11ea-8dde-63e70187e3e9)
 #
 [Portfolio Blog](https://www.theScottKrause.com) |
+[🚀 Résumé](https://thescottkrause.com/Aardvark_Scott_C_Krause_2020.pdf) |
 [NPM](https://www.npmjs.com/~neodigm) |
 [Github](https://github.com/neodigm) |
 [LinkedIn](https://www.linkedin.com/in/neodigm24/) |
