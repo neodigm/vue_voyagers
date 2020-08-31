@@ -150,7 +150,7 @@ main section article header h2 {
 }
 main section article header {
 	display: grid;
-	grid-template-columns: repeat( auto-fill, 50%);
+	grid-template-columns: repeat( auto-fill, 32%);
 	align-items: center;
 	text-align: left;
 	border-bottom: 1px solid #ddd;
