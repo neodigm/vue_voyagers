@@ -123,13 +123,12 @@ main {
 	grid-template-columns: 60% 40%;
 }
 main > section {
-
-	background-color: #fff;
+	background-color: #ffff;
 }
 main section article {
 	border: solid 1px #888888;
 	border-radius: 6px 16px;
-	background-color: #fff;
+	background-color: #ffff;
 	margin: 8px;
 	padding: 8px;
 }
@@ -170,7 +169,7 @@ main section article header {
 	background: rgba(112, 111, 112, .2);
 }
 .visual__data--species::-webkit-scrollbar-thumb {
-	background: #89595b;
+	background: #89595a;
 }
 .visual__data--species div {
 	font: 10px sans-serif;
@@ -382,10 +381,10 @@ section:nth-of-type(2) form a.cta_invalid {
 	background-size: .65em auto, 100%;
 }
 .select-css:hover {
-	border-color: #888;
+	border-color: #8888;
 }
 .select-css:focus {
-	border-color: #888888;
+	border-color: #868686;
 	box-shadow: 0 0 1px 3px rgba(158, 118, 119, .6);
 	box-shadow: 0 0 0 3px -moz-mac-focusring;
 	color: #222;
