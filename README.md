@@ -3,7 +3,7 @@
 
 # Vue.js Voyagers | Gamified Travel App 🚀
 
-![](https://neodigm.github.io/vue_voyagers/vuejs_space_travel_app.png)
+![https://neodigm.github.io/vue_voyagers/index.html](https://neodigm.github.io/vue_voyagers/vuejs_space_travel_app.png)
 
 [Vue.js D3.js Star Wars programming challenge](https://neodigm.github.io/vue_voyagers/index.html) 
 
