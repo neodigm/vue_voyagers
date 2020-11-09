@@ -56,3 +56,32 @@ Add any other interactive data visualization ideas you think this UI might benef
   <img src="https://repository-images.githubusercontent.com/178555357/2b6ad880-7aa0-11ea-8dde-63e70187e3e9" title="D3js Skills with Audio">
   </a>
 </p>
+
+```javascript
+  watch: {
+      RESTCount : function(){  //  All JSON have been received
+          const NUM_COMPLETE = 4, NUM_NOT_COMPLETE_ONE = 1, NUM_NOT_COMPLETE_TWO = 2;
+          if( this.RESTCount === NUM_NOT_COMPLETE_ONE ) snck.q("Loading ...");
+          if( this.RESTCount === NUM_NOT_COMPLETE_TWO ){
+              if( this.one2ten() >= 6 ) snck.q("Please Wait ...");
+          }
+          if( this.RESTCount === NUM_COMPLETE ) this.RESTPost();  //  Init Sort and Gen Rank
+      },
+      aPeopleSel: function(){
+        var that = this;
+        d3.select(".visual__data--species").selectAll("div").remove(); // Change color by value, rnd if 1
+        d3.select(".visual__data--species") //  d3.js dynamic charting (d3js.org) (http://circos.ca/)
+        .selectAll("div")
+            .data( this.aPeopleSel_species )
+        .enter().append("div")
+            .style("width", function( d ) { return d.value * 28 + 84 + "px"; })
+            .attr("class", function(d) { 
+                var colorClass = ( d.value == 1 ) ?  that.one2ten() : d.value;
+                return "visual__data--bg" + colorClass; })
+            .text(function( d ) { return ( d.label + " | " + d.value ); });
+      },
+      aShps: function(){
+          if( this.aShps.length == 2 ){ a55Rev.autoOpen("js-rev__splash--id"); }
+      }
+  }
+```
