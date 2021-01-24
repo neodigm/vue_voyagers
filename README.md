@@ -92,6 +92,8 @@ Add any other interactive data visualization ideas you think this UI might benef
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvperiod.svg" width="66" alt="Vivid Vector Skulduggery">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvj.svg" width="66" alt="Vivid Vector Skulduggery">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvs.svg" width="66" alt="Vivid Vector Skulduggery">
+</p>
+<p align="center">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvspace.svg" width="66" alt="Vivid Vector Skulduggery">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvd.svg" width="66" alt="Vivid Vector Skulduggery">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vv3.svg" width="66" alt="Vivid Vector Skulduggery">
