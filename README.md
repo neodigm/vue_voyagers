@@ -1,6 +1,6 @@
 ![](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
 
-# Vue.js Voyagers 🪐 Gamified Travel SPA with D3.js and Web Audio API
+# Vue.js Voyagers 🪐 Gamified Travel SPA with D3.js and Web Audio
 
 <p align="center">
   <a target="_blank" href="https://neodigm.github.io/vue_voyagers/index.html">
@@ -62,19 +62,19 @@ Add any other interactive data visualization ideas you think this UI might benef
 ```
 
 <p align="center">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvv.svg" width="66" alt="Vivid Vector Skulduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvu.svg" width="66" alt="Vivid Vector Skulduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vve.svg" width="66" alt="Vivid Vector Skulduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvperiod.svg" width="44" alt="Vivid Vector Skulduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvj.svg" width="66" alt="Vivid Vector Skulduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvs.svg" width="66" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvv.svg" width="44" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvu.svg" width="44" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vve.svg" width="44" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvperiod.svg" width="33" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvj.svg" width="44" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvs.svg" width="44" alt="Vivid Vector Skulduggery">
 </p>
 <p align="center">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvd.svg" width="66" alt="Vivid Vector Skulduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vv3.svg" width="66" alt="Vivid Vector Skulduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvperiod.svg" width="44" alt="Vivid Vector Skulduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvj.svg" width="66" alt="Vivid Vector Skulduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvs.svg" width="66" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvd.svg" width="44" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vv3.svg" width="44" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvperiod.svg" width="33" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvj.svg" width="44" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvs.svg" width="44" alt="Vivid Vector Skulduggery">
 </p>
 <p align="center">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvw.svg" width="44" alt="Vivid Vector Skulduggery">
