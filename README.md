@@ -77,15 +77,19 @@ Add any other interactive data visualization ideas you think this UI might benef
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvs.svg" width="44" alt="Vivid Vector Skulduggery">
 </p>
 <p align="center">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvw.svg" width="44" alt="Vivid Vector Skulduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vve.svg" width="44" alt="Vivid Vector Skulduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvb.svg" width="44" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvw.svg" width="33" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vve.svg" width="33" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvb.svg" width="33" alt="Vivid Vector Skulduggery">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvspace.svg" width="22" alt="Vivid Vector Skulduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vva.svg" width="44" alt="Vivid Vector Skulduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvu.svg" width="44" alt="Vivid Vector Skulduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvd.svg" width="44" alt="Vivid Vector Skulduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvi.svg" width="44" alt="Vivid Vector Skulduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvo.svg" width="44" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vva.svg" width="33" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvu.svg" width="33" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvd.svg" width="33" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvi.svg" width="33" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvo.svg" width="33" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvspace.svg" width="22" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vva.svg" width="33" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvp.svg" width="33" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvi.svg" width="33" alt="Vivid Vector Skulduggery">
 </p>
 
 #
