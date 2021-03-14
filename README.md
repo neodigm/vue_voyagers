@@ -33,7 +33,7 @@ Have the ability to assign a captain.
 Add any other interactive data visualization ideas you think this UI might benefit from.
 
 ```javascript
-  watch: {
+  watch: {  //  Fly the Unfriendly Skies
       RESTCount : function(){  //  All JSON have been received
           const NUM_COMPLETE = 4, NUM_NOT_COMPLETE_ONE = 1, NUM_NOT_COMPLETE_TWO = 2;
           if( this.RESTCount === NUM_NOT_COMPLETE_ONE ) snck.q("Loading ...");
