@@ -18,7 +18,7 @@
 
 # Client Requirements:
 
-Use Vue.js
+Use Vue.js and [Advanced JavaScript](https://thescottkrause.com/tags/javascript/)
 
 Use https://swapi.co/ API for your data.  (http://stapi.co/api/)
 
