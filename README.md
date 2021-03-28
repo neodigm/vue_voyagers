@@ -10,7 +10,7 @@
 
 [Vue.js D3.js Star Wars programming challenge](https://neodigm.github.io/vue_voyagers/index.html) 
 
-[Vue.js D3.js Star Wars Responsive view](https://thescottkrause.com/utils/neodigm55-mobile-resizer/?vp=m&uri=https://neodigm.github.io/vue_voyagers/index.html) 
+[Vue.js D3.js Star Wars Responsive view](https://www.thescottkrause.com/utils/neodigm55-mobile-resizer/?vp=m&uri=https://neodigm.github.io/vue_voyagers/index.html) 
 
 [Vue.js D3.js Star Wars LinkedIn Post](https://www.linkedin.com/feed/update/urn:li:activity:6533433750137778176)
 
@@ -30,7 +30,7 @@ Create the ability to assign selected voyagers to a starship to create a Voyage.
 
 Have the ability to assign a captain.
 
-Add any other interactive data visualization ideas you think this UI might benefit from.
+Add any other interactive [data visualization](https://www.thescottkrause.com/emerging_tech/cytoscape_dataviz_skills/) ideas you think this UI might benefit from.
 
 ```javascript
   watch: {  //  Fly the Unfriendly Skies
