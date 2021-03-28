@@ -10,7 +10,7 @@
 
 [Vue.js D3.js Star Wars programming challenge](https://neodigm.github.io/vue_voyagers/index.html) 
 
-[Vue.js D3.js Star Wars Responsive view](https://material.io/tools/resizer/#url=https%3A%2F%2Fneodigm.github.io%2Fvue_voyagers%2F) 
+[Vue.js D3.js Star Wars Responsive view](https://thescottkrause.com/utils/neodigm55-mobile-resizer/?vp=m&uri=https://neodigm.github.io/vue_voyagers/index.html) 
 
 [Vue.js D3.js Star Wars LinkedIn Post](https://www.linkedin.com/feed/update/urn:li:activity:6533433750137778176)
 
