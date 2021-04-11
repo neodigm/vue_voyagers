@@ -107,7 +107,8 @@ Add any other interactive [data visualization](https://www.thescottkrause.com/em
 [Twitter](https://twitter.com/neodigm24) |
 [Keybase](https://keybase.io/neodigm) |
 [Docker](https://hub.docker.com/u/neodigm) |
-[W3C](https://www.w3.org/users/123844)
+[W3C](https://www.w3.org/users/123844) | 
+[InfoSec](https://arcanus55.medium.com/offline-vs-cloud-password-managers-51b1fbebe301)
 #
 
 <p align="center">
