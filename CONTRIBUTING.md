@@ -1,5 +1,5 @@
 <!-- omit in toc -->
-# Contributing to Vue Voyagers
+# Contributing to Vue Voyagers (Vue.js)
 
 First off, thanks for taking the time to contribute! ❤️
 
