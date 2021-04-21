@@ -89,7 +89,7 @@ Add any other interactive [data visualization](https://www.thescottkrause.com/em
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvspace.svg" width="22" alt="Vivid Vector Skulduggery">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vva.svg" width="33" alt="Vivid Vector Skulduggery">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvp.svg" width="33" alt="Vivid Vector Skulduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvi.svg" width="33" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvi.svg" width="33" alt="Vivid Vector 🌑🌒🌓🌔🌕🌖🌗🌘🌑">
 </p>
 
 #
