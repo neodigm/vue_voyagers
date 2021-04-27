@@ -22,7 +22,7 @@ Use Vue.js and [Advanced JavaScript](https://www.thescottkrause.com/tags/javascr
 
 Use https://swapi.co/ API for your data.  (http://stapi.co/api/)
 
-Display a list of Voyagers (characters) and some of their stats.
+Display a list of Voyagers (characters) and some of their stats. 🌑🌒🌓🌔🌕🌖🌗🌘🌑 ß
 
 Display a selectable list of starships.
 
