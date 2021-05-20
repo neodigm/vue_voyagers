@@ -77,7 +77,7 @@ Add any other interactive [data visualization](https://www.thescottkrause.com/em
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvs.svg" width="33" alt="Vivid Vector Skulduggery">
 </p>
 <p align="center">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvw.svg" width="33" alt="Vivid Vector Skulduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvw.svg" width="33" alt="Vivid 🗝️ Flux Capacitor 🪐 Skulduggery">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vve.svg" width="33" alt="Vivid Vector Skulduggery">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvb.svg" width="33" alt="Vivid Vector Skulduggery">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvspace.svg" width="22" alt="Vivid Vector Skulduggery">
