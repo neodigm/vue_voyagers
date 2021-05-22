@@ -15,7 +15,7 @@
     "url": "https://www.theScottKrause.com",
     "sameAs" : [ "https://github.com/neodigm",
 "https://www.theScottKrause.com/",
-"https://www.thescottkrause.com/Arcanus_Scott_C_Krause_2020.pdf",
+"https://www.thescottkrause.com/Arcanus_Scott_C_Krause_2021.pdf",
 "https://www.thescottkrause.com/tags/javascript/",
 "https://www.thescottkrause.com/emerging_tech/ecommerce-accessibility-a11y/",
 "https://thescottkrause.com/emerging_tech/gameification-threejs-webcrypto-accelerator-blender-gltf/",
