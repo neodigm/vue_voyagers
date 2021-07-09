@@ -111,6 +111,7 @@ Add any other interactive [data visualization](https://www.thescottkrause.com/em
 [InfoSec](https://arcanus55.medium.com/offline-vs-cloud-password-managers-51b1fbebe301)
 #
 
+
 <p align="center">
   <a target="_blank" href="https://thescottkrause.com/d3_datavis_skills.html">
   <img src="https://repository-images.githubusercontent.com/178555357/2b6ad880-7aa0-11ea-8dde-63e70187e3e9" title="D3js Skills with Audio">
