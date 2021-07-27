@@ -11,14 +11,14 @@ body {
 	color: #4d473c;
 	background-color: #fff;
 }
-body::-webkit-scrollbar {
+*::-webkit-scrollbar {
 	width: 8px;
 	height: 8px;
 }
-body::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
 	background: rgba(112, 111, 112, .2);
 }
-body::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
 	background: #89595b;
 }
 a {
