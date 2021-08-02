@@ -121,6 +121,6 @@ Add any other interactive [data visualization](https://www.thescottkrause.com/em
 
 <p align="center">
   <a target="_blank" href="https://www.thescottkrause.com">
-    <img src="https://neodigm.github.io/pan-fried-monkey-fisticuffs/thescottkrause_contact_card.png" title="TypeScript 🚀 Three.js 🍭 WASM ✨ PWA">
+    <img src="https://neodigm.github.io/pan-fried-monkey-fisticuffs/thescottkrause_contact_card.png" title="TypeScript ⚡ WASM ✨ NestJS">
   </a>
 </p>
