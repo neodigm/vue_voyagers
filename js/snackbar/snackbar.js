@@ -1,4 +1,4 @@
-"use strict"; // Material Design Snackbar Toast Component
+"use strict"; // Material Design Snackbar Toast Vanilla JS Component
 var snck=(function(doc,eID){var _nTimeout=5400,_aQ=[];
     var _eSb=doc.getElementById(eID),_eSbText=_eSb.querySelectorAll("P")[0];
     var _fClose=function(){_aQ.shift();
