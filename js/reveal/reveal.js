@@ -1,4 +1,4 @@
-"use strict"; // A meticulous merger of form and function
+"use strict"; // A meticulous merger of form and function (Vanilla JS Comp)
 var _aRevAct=0, _aRevX=0, _sRevId="", _bIsOpen = false, _fOnClose=null;
 var a55Rev = {
   eRev: 0, eRevScrim: 0,
