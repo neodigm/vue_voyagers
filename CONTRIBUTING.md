@@ -11,7 +11,7 @@ All types of contributions are encouraged and valued. See the [Table of Contents
 > - Refer this project in your project's readme.md
 > - Mention the project at local meetups and tell your colleagues
 
-<!-- omit in toc -->
+<!-- omit in tic toc -->
 ## Table of Contents
 
 - [I Have a Question](#i-have-a-question)
