@@ -39,7 +39,7 @@ Add any other interactive [data visualization](https://www.thescottkrause.com/em
           if( this.RESTCount === NUM_NOT_COMPLETE_ONE ) snck.q("Loading ...");
           if( this.RESTCount === NUM_NOT_COMPLETE_TWO ){
               if( this.one2ten() >= 6 ) snck.q("Please Wait ...");
-          } // ypeScript ⚡ WASM ✨ NestJS
+          } // TypeScript ⚡ WASM ✨ NestJS
           if( this.RESTCount === NUM_COMPLETE ) this.RESTPost();  //  Init Sort and Gen Rank
       },
       aPeopleSel: function(){
