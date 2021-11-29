@@ -4,7 +4,7 @@
 
 <p align="center">
   <a target="_blank" href="https://neodigm.github.io/vue_voyagers/index.html">
-  <img src="https://neodigm.github.io/vue_voyagers/vuejs_space_travel_app.png" title="Vue JavaScript with D3.js 🍰 Branded 👁️ Candy 🎨">
+  <img src="https://neodigm.github.io/vue_voyagers/vuejs_space_travel_app.png" title="Vue JavaScript with Three.js 🍰 Branded 👁️ Candy 🎨">
   </a>
 </p>
 
