@@ -107,7 +107,7 @@ Add any other interactive [data visualization](https://www.thescottkrause.com/em
 [Salesforce](https://trailblazer.me/id/skrause) |
 [Code Pen](https://codepen.io/neodigm55) |
 [M5M](https://www.machfivemarketing.com/accelerators/google_analytics_ga4_migration/) |
-[Arcanus 55](https://www.arcanus55.com/) |
+[Arcanus 55](https://www.arcanus55.com/?trusted55=A55PV2) |
 [Twitter](https://twitter.com/neodigm24) |
 [Keybase](https://keybase.io/neodigm) |
 [W3C](https://www.w3.org/users/123844) | 
