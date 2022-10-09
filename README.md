@@ -106,7 +106,7 @@ Add any other interactive [data visualization](https://www.thescottkrause.com/em
 [Gists](https://gist.github.com/neodigm?direction=asc&sort=created) |
 [Salesforce](https://trailblazer.me/id/skrause) |
 [Code Pen](https://codepen.io/neodigm55) |
-[M5M](https://www.machfivemarketing.com/) |
+[M5M](https://www.machfivemarketing.com/accelerators/google_analytics_ga4_migration/) |
 [Arcanus 55](https://www.arcanus55.com/) |
 [Twitter](https://twitter.com/neodigm24) |
 [Keybase](https://keybase.io/neodigm) |
