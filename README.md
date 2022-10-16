@@ -1,6 +1,6 @@
 ![](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
 
-# Vue.js Voyagers 🪐 Gamified Travel SPA with D3.js and Web Audio
+# Vue.js Voyagers 🪐 Gamified Travel SPA with D3.js, Web Notifications, and Web Audio
 
 <p align="center">
   <a target="_blank" href="https://neodigm.github.io/vue_voyagers/index.html">
@@ -81,7 +81,7 @@ Add any other interactive [data visualization](https://www.thescottkrause.com/em
 </p>
 <p align="center">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvw.svg" width="33" alt="Vivid 🗝️ Flux Capacitor 🪐 Skullduggery">
-<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vve.svg" width="33" alt="Vivid Vector Skullduggery">
+<img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vve.svg" width="33" alt="Vivid Vector Skullduggery Chicago">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvb.svg" width="33" alt="Vivid Vector Skullduggery">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvspace.svg" width="22" alt="Vivid Vector Skullduggery">
 <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vva.svg" width="33" alt="Vivid Vector Skullduggery">
