@@ -21,7 +21,7 @@ https://user-images.githubusercontent.com/3151842/145446819-8984f0c9-5363-47ca-9
 
 # Client Requirements:
 
-Use Vue.js and [Advanced JavaScript](https://www.thescottkrause.com/tags/javascript/)
+Use [Vue.js](https://www.thescottkrause.com/emerging_tech/curated-vue-typescript/) and [Advanced JavaScript](https://www.thescottkrause.com/tags/javascript/)
 
 Use https://swapi.co/ API for your data.  (http://stapi.co/api/)
 
