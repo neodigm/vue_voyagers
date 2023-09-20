@@ -29,7 +29,7 @@ Display a list of Voyagers (characters) and some of their stats. 🌑🌒🌓�
 
 Display a selectable list of starships.
 
-Create the ability to assign selected voyagers to a starship to create a Voyage.
+Create the ability to assign selected voyagers to a starship to create a [VOYAGE](https://neodigm.github.io/Next-Generation-Storefront-NGS/NGS_VUE_UML_Scott_C_Krause_2020.pdf).
 
 Have the ability to assign a captain.
 
