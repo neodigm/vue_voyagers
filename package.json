@@ -77,7 +77,7 @@
     "immutable": "^4.0.0-rc.12",
     "inquirer": "^7.3.3",
     "jest": "^26.5.3",
-    "joi": "^17.2.1",
+    "joi": "^17.13.6",
     "jquery": "^3.5.1",
     "js-yaml": "^4.1.1",
     "jsonwebtoken": "^8.5.1",
