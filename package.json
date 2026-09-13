@@ -74,7 +74,7 @@
     "gulp-util": "^3.0.8",
     "handlebars": "^4.7.7",
     "html-webpack-plugin": "^4.5.0",
-    "immutable": "^4.0.0-rc.12",
+    "immutable": "^4.3.9",
     "inquirer": "^7.3.3",
     "jest": "^26.5.3",
     "joi": "^17.13.6",
