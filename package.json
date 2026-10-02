@@ -89,7 +89,7 @@
     "moment": "^2.31.0",
     "mongodb": "^3.6.2",
     "mongoose": "^5.10.9",
-    "morgan": "^1.10.0",
+    "morgan": "^1.12.1",
     "node-fetch": "^2.6.1",
     "node-sass": "^4.14.1",
     "object-assign": "^4.1.1",
